@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DS Book - Don Quixote</title>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              orange: {
+                500: '#FF5722',
+                600: '#E64A19',
+              },
+              navy: {
+                700: '#1C2B41',
+                800: '#142236',
+                900: '#0A1629',
+              }
+            },
+          },
+        },
+      }
+    </script>
+  </head>
+  <body>
+    <div class="flex flex-col min-h-screen">
+      <!-- Header -->
+      <header class="border-b border-gray-200">
+        <div class="container mx-auto px-4 py-3 flex items-center justify-between">
+          <div class="flex items-center space-x-8">
+            <a href="/" class="flex items-center text-orange-500 font-bold text-xl">
+              <i data-lucide="book-open" class="mr-2"></i>
+              <span>DS Book</span>
+            </a>
+            
+            <nav class="hidden md:flex items-center space-x-8">
+              <a href="/shop" class="text-gray-800 hover:text-orange-500 transition-colors">Shop</a>
+              <a href="/books" class="text-gray-800 hover:text-orange-500 transition-colors">Books</a>
+              <a href="/dropship" class="text-gray-800 hover:text-orange-500 transition-colors">Dropship</a>
+              <a href="/community" class="text-gray-800 hover:text-orange-500 transition-colors">Community</a>
+            </nav>
+          </div>
+          
+          <div class="flex items-center space-x-4">
+            <div class="border border-gray-300 rounded px-2 py-1">
+              <span class="text-sm font-medium">EN</span>
+            </div>
+            <a href="/profile" class="w-9 h-9 flex items-center justify-center bg-gray-100 rounded-full hover:bg-gray-200 transition-colors">
+              <i data-lucide="user" class="w-5 h-5"></i>
+            </a>
+          </div>
+        </div>
+      </header>
+
+      <!-- Main Content -->
+      <main class="flex-grow">
+        <!-- Book Details Section -->
+        <section class="bg-[#B8860B] py-16">
+          <div class="container mx-auto px-4">
+            <h1 class="text-4xl font-bold text-white text-center mb-12">CERVANTES DON QUIXOTE</h1>
+            
+            <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+              <!-- Book Cover -->
+              <div class="bg-white p-4 rounded-lg shadow-lg">
+                <img 
+                  src="https://images.pexels.com/photos/1005324/literature-book-open-pages-1005324.jpeg" 
+                  alt="Don Quixote Book Cover" 
+                  class="w-full h-auto rounded"
+                />
+              </div>
+              
+              <!-- Book Description -->
+              <div class="text-white">
+                <p class="text-xl leading-relaxed mb-8">
+                  Don Quixote, the full title being The Ingenious Gentleman Don Quixote of La Mancha, is a Spanish novel by Miguel de Cervantes. It was originally published in two parts, in 1605 and 1615. Considered a founding work of Western literature, it is often labelled as the first modern novel. Don Quixote is also one of the most-translated books in the world and one of the best-selling novels of all time.
+                </p>
+                
+                <div class="mb-8">
+                  <h2 class="text-2xl font-bold mb-4">Summary:</h2>
+                  <p class="text-lg leading-relaxed">
+                    For Cervantes and the readers of his day, Don Quixote was a one-volume book published in 1605, divided internally into four parts, not the first part of a two-part set. The mention in the 1605 book of further adventures yet to be told was totally conventional, did not indicate any authorial plans for a continuation, and was not taken seriously by the book's first readers.
+                  </p>
+                </div>
+                
+                <button class="w-full bg-white text-gray-900 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-colors">
+                  ADD TO CHART
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <!-- Footer -->
+      <footer class="bg-navy-900 text-white">
+        <div class="container mx-auto px-4 py-12">
+          <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div>
+              <h3 class="font-bold text-lg mb-4">Product</h3>
+              <ul class="space-y-2">
+                <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Popular Books</a></li>
+                <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Latest Books</a></li>
+                <li><a href="#" class="text-gray-300 hover:text-white transition-colors">BB Shop</a></li>
+                <li><a href="#" class="text-gray-300 hover:text-white transition-colors">BB Drive</a></li>
+                <li><a href="#" class="text-gray-300 hover:text-white transition-colors">BB Partner</a></li>
+                <li><a href="#" class="text-gray-300 hover:text-white transition-colors">BB Intern</a></li>
+              </ul>
+            </div>
+            
+            <div>
+              <h3 class="font-bold text-lg mb-4">Information</h3>
+              <ul class="space-y-2">
+                <li><a href="#" class="text-gray-300 hover:text-white transition-colors">FAQ</a></li>
+                <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Blog</a></li>
+                <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Help</a></li>
+              </ul>
+            </div>
+            
+            <div>
+              <h3 class="font-bold text-lg mb-4">Company</h3>
+              <ul class="space-y-2">
+                <li><a href="#" class="text-gray-300 hover:text-white transition-colors">About Us</a></li>
+                <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Career</a></li>
+                <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Contact Us</a></li>
+              </ul>
+            </div>
+            
+            <div class="bg-navy-800 p-6 rounded">
+              <h3 class="font-bold text-lg mb-4">Subscribe</h3>
+              <div class="flex mb-4">
+                <input 
+                  type="email" 
+                  placeholder="Email Address" 
+                  class="flex-grow px-3 py-2 rounded-l text-gray-800 focus:outline-none"
+                />
+                <button class="bg-orange-500 hover:bg-orange-600 text-white px-3 py-2 rounded-r transition-colors">
+                  <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                </button>
+              </div>
+              <p class="text-sm text-gray-400">
+                Hi, we are from DS Book. Our goal is to provide the best experience in enjoying and purchasing books.
+              </p>
+            </div>
+          </div>
+          
+          <div class="mt-12 pt-8 border-t border-navy-700 flex flex-col md:flex-row justify-between items-center">
+            <div class="flex items-center text-orange-500 font-bold text-xl mb-4 md:mb-0">
+              <i data-lucide="book-open" class="mr-2"></i>
+              <span>DS Book</span>
+            </div>
+            
+            <div class="flex flex-wrap justify-center space-x-6 mb-4 md:mb-0">
+              <a href="#" class="text-sm text-gray-300 hover:text-white transition-colors">Terms & Conditions</a>
+              <a href="#" class="text-sm text-gray-300 hover:text-white transition-colors">Privacy Policy</a>
+              <a href="#" class="text-sm text-gray-300 hover:text-white transition-colors">Cookies</a>
+            </div>
+            
+            <div class="flex space-x-4">
+              <a href="#" class="text-gray-300 hover:text-white transition-colors">
+                <i data-lucide="facebook" class="w-5 h-5"></i>
+              </a>
+              <a href="#" class="text-gray-300 hover:text-white transition-colors">
+                <i data-lucide="mail" class="w-5 h-5"></i>
+              </a>
+              <a href="#" class="text-gray-300 hover:text-white transition-colors">
+                <i data-lucide="twitter" class="w-5 h-5"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script>
+      lucide.createIcons();
+    </script>
+  </body>
+</html>

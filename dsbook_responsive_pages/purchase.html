@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Purchase History - DS Book</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+          <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              orange: {
+                500: '#FF5722',
+                600: '#E64A19',
+              },
+              navy: {
+                700: '#1C2B41',
+                800: '#142236',
+                900: '#0A1629',
+              }
+            },
+          },
+        },
+      }
+    </script>
+
+  </head>
+  <body class="bg-[#b07f0a] font-sans">
+
+    <!-- Header -->
+<header class="bg-white border-b border-gray-200">
+  <div class="container mx-auto px-4 py-3 flex items-center justify-between">
+    <div class="flex items-center space-x-8">
+      <a href="/" class="flex items-center text-orange-500 font-bold text-xl">
+        <i data-lucide="book-open" class="mr-2"></i>
+        <span>DS Book</span>
+      </a>
+
+      <nav class="hidden md:flex items-center space-x-8">
+        <a href="/shop" class="text-gray-800 hover:text-orange-500 transition-colors">Shop</a>
+        <a href="/books" class="text-gray-800 hover:text-orange-500 transition-colors">Books</a>
+        <a href="/dropship" class="text-gray-800 hover:text-orange-500 transition-colors">Dropship</a>
+        <a href="/community" class="text-gray-800 hover:text-orange-500 transition-colors">Community</a>
+      </nav>
+    </div>
+
+    <div class="flex items-center space-x-4">
+      <!-- Ikon keranjang di luar kotak -->
+      <a href="/cart" class="w-9 h-9 flex items-center justify-center hover:bg-gray-100 rounded-full transition-colors">
+        <i data-lucide="shopping-cart" class="w-5 h-5 text-gray-600"></i>
+      </a>
+
+      <!-- Kotak EN -->
+      <div class="border border-gray-300 rounded px-2 py-1">
+        <span class="text-sm font-medium">EN</span>
+      </div>
+
+      <!-- Ikon profil -->
+      <a href="/profile" class="w-9 h-9 flex items-center justify-center bg-gray-100 rounded-full hover:bg-gray-200 transition-colors">
+        <i data-lucide="user" class="w-5 h-5"></i>
+      </a>
+    </div>
+  </div>
+</header>
+
+    <!-- Main Content -->
+    <main class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-6">
+      <h1 class="text-white text-xl font-bold mb-4">Riwayat Pembelian Anda</h1>
+
+      <!-- Item 1 -->
+      <section class="flex flex-col sm:flex-row sm:space-x-6 space-y-4 sm:space-y-0">
+        <div class="flex-shrink-0 rounded-lg bg-[#c19e44] p-1" style="max-width: 240px;">
+          <img src="https://via.placeholder.com/240x140?text=Dunia+Sophie" alt="Dunia Sophie" class="rounded-lg w-full h-full object-cover" />
+        </div>
+        <div class="flex-1 rounded-lg bg-[#c19e44] p-6 text-white font-semibold text-base leading-tight">
+          <h2 class="text-lg font-bold mb-2">Judul Buku: Dunia Sophie</h2>
+          <p class="mb-1">Tanggal Pembelian: 12 Mei 2025</p>
+          <p class="mb-1">Status: <span class="text-green-300">Terkirim</span></p>
+          <p class="mb-4">Total Harga: <span class="text-yellow-200 font-bold">Rp120.000</span></p>
+          <a href="#" class="text-pink-400 font-semibold text-sm flex items-center space-x-1">
+            <span>Lihat Detail</span>
+            <i class="fas fa-arrow-right text-xs"></i>
+          </a>
+        </div>
+      </section>
+
+      <!-- Item 2 -->
+      <section class="flex flex-col sm:flex-row sm:space-x-6 space-y-4 sm:space-y-0">
+        <div class="flex-shrink-0 rounded-lg bg-[#c19e44] p-1" style="max-width: 240px;">
+          <img src="https://via.placeholder.com/240x140?text=Laskar+Pelangi" alt="Laskar Pelangi" class="rounded-lg w-full h-full object-cover" />
+        </div>
+        <div class="flex-1 rounded-lg bg-[#c19e44] p-6 text-white font-semibold text-base leading-tight">
+          <h2 class="text-lg font-bold mb-2">Judul Buku: Laskar Pelangi</h2>
+          <p class="mb-1">Tanggal Pembelian: 9 Mei 2025</p>
+          <p class="mb-1">Status: <span class="text-yellow-200">Sedang Dikirim</span></p>
+          <p class="mb-4">Total Harga: <span class="text-yellow-200 font-bold">Rp95.000</span></p>
+          <a href="#" class="text-pink-400 font-semibold text-sm flex items-center space-x-1">
+            <span>Lihat Detail</span>
+            <i class="fas fa-arrow-right text-xs"></i>
+          </a>
+        </div>
+      </section>
+
+      <!-- Item 3 -->
+      <section class="flex flex-col sm:flex-row sm:space-x-6 space-y-4 sm:space-y-0">
+        <div class="flex-shrink-0 rounded-lg bg-[#c19e44] p-1" style="max-width: 240px;">
+          <img src="https://via.placeholder.com/240x140?text=Atomic+Habits" alt="Atomic Habits" class="rounded-lg w-full h-full object-cover" />
+        </div>
+        <div class="flex-1 rounded-lg bg-[#c19e44] p-6 text-white font-semibold text-base leading-tight">
+          <h2 class="text-lg font-bold mb-2">Judul Buku: Atomic Habits</h2>
+          <p class="mb-1">Tanggal Pembelian: 3 Mei 2025</p>
+          <p class="mb-1">Status: <span class="text-red-300">Dibatalkan</span></p>
+          <p class="mb-4">Total Harga: <span class="text-yellow-200 font-bold">Rp130.000</span></p>
+          <a href="#" class="text-pink-400 font-semibold text-sm flex items-center space-x-1">
+            <span>Lihat Detail</span>
+            <i class="fas fa-arrow-right text-xs"></i>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+      <footer class="bg-navy-900 text-white">
+        <div class="container mx-auto px-4 py-12">
+          <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div>
+              <h3 class="font-bold text-lg mb-4">Product</h3>
+              <ul class="space-y-2">
+                <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Popular Books</a></li>
+                <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Latest Books</a></li>
+                <li><a href="#" class="text-gray-300 hover:text-white transition-colors">BB Shop</a></li>
+                <li><a href="#" class="text-gray-300 hover:text-white transition-colors">BB Drive</a></li>
+                <li><a href="#" class="text-gray-300 hover:text-white transition-colors">BB Partner</a></li>
+                <li><a href="#" class="text-gray-300 hover:text-white transition-colors">BB Intern</a></li>
+              </ul>
+            </div>
+            
+            <div>
+              <h3 class="font-bold text-lg mb-4">Information</h3>
+              <ul class="space-y-2">
+                <li><a href="#" class="text-gray-300 hover:text-white transition-colors">FAQ</a></li>
+                <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Blog</a></li>
+                <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Help</a></li>
+              </ul>
+            </div>
+            
+            <div>
+              <h3 class="font-bold text-lg mb-4">Company</h3>
+              <ul class="space-y-2">
+                <li><a href="#" class="text-gray-300 hover:text-white transition-colors">About Us</a></li>
+                <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Career</a></li>
+                <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Contact Us</a></li>
+              </ul>
+            </div>
+            
+            <div class="bg-navy-800 p-6 rounded">
+              <h3 class="font-bold text-lg mb-4">Subscribe</h3>
+              <div class="flex mb-4">
+                <input 
+                  type="email" 
+                  placeholder="Email Address" 
+                  class="flex-grow px-3 py-2 rounded-l text-gray-800 focus:outline-none"
+                />
+                <button class="bg-orange-500 hover:bg-orange-600 text-white px-3 py-2 rounded-r transition-colors">
+                  <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                </button>
+              </div>
+              <p class="text-sm text-gray-400">
+                Hi, we are from DS Book. Our goal is to provide the best experience in enjoying and purchasing books.
+              </p>
+            </div>
+          </div>
+          
+          <div class="mt-12 pt-8 border-t border-navy-700 flex flex-col md:flex-row justify-between items-center">
+            <div class="flex items-center text-orange-500 font-bold text-xl mb-4 md:mb-0">
+              <i data-lucide="book-open" class="mr-2"></i>
+              <span>DS Book</span>
+            </div>
+            
+            <div class="flex flex-wrap justify-center space-x-6 mb-4 md:mb-0">
+              <a href="#" class="text-sm text-gray-300 hover:text-white transition-colors">Terms & Conditions</a>
+              <a href="#" class="text-sm text-gray-300 hover:text-white transition-colors">Privacy Policy</a>
+              <a href="#" class="text-sm text-gray-300 hover:text-white transition-colors">Cookies</a>
+            </div>
+            
+            <div class="flex space-x-4">
+              <a href="#" class="text-gray-300 hover:text-white transition-colors">
+                <i data-lucide="facebook" class="w-5 h-5"></i>
+              </a>
+              <a href="#" class="text-gray-300 hover:text-white transition-colors">
+                <i data-lucide="mail" class="w-5 h-5"></i>
+              </a>
+              <a href="#" class="text-gray-300 hover:text-white transition-colors">
+                <i data-lucide="twitter" class="w-5 h-5"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </footer>
+        <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+      lucide.createIcons();
+    </script>
+  </body>
+</html>

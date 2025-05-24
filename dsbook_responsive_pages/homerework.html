@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DS Book - Online Bookstore</title>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              orange: {
+                500: '#FF5722',
+                600: '#E64A19',
+              },
+              navy: {
+                700: '#1C2B41',
+                800: '#142236',
+                900: '#0A1629',
+              }
+            },
+          },
+        },
+      }
+    </script>
+  </head>
+  <body>
+    <div class="flex flex-col min-h-screen">
+      <!-- Header -->
+<header class="border-b border-gray-200">
+  <div class="container mx-auto px-4 py-3 flex items-center justify-between">
+    <div class="flex items-center space-x-8">
+      <a href="/" class="flex items-center text-orange-500 font-bold text-xl">
+        <i data-lucide="book-open" class="mr-2"></i>
+        <span>DS Book</span>
+      </a>
+
+      <nav class="hidden md:flex items-center space-x-8">
+        <a href="/shop" class="text-gray-800 hover:text-orange-500 transition-colors">Shop</a>
+        <a href="/books" class="text-gray-800 hover:text-orange-500 transition-colors">Books</a>
+        <a href="/dropship" class="text-gray-800 hover:text-orange-500 transition-colors">Dropship</a>
+        <a href="/community" class="text-gray-800 hover:text-orange-500 transition-colors">Community</a>
+      </nav>
+    </div>
+
+    <div class="flex items-center space-x-4">
+      <!-- Ikon keranjang di luar kotak -->
+      <a href="/cart" class="w-9 h-9 flex items-center justify-center hover:bg-gray-100 rounded-full transition-colors">
+        <i data-lucide="shopping-cart" class="w-5 h-5 text-gray-600"></i>
+      </a>
+
+      <!-- Kotak EN -->
+      <div class="border border-gray-300 rounded px-2 py-1">
+        <span class="text-sm font-medium">EN</span>
+      </div>
+
+      <!-- Ikon profil -->
+      <a href="/profile" class="w-9 h-9 flex items-center justify-center bg-gray-100 rounded-full hover:bg-gray-200 transition-colors">
+        <i data-lucide="user" class="w-5 h-5"></i>
+      </a>
+    </div>
+  </div>
+</header>
+
+      <!-- Main Content -->
+      <main class="flex-grow">
+        <!-- Promotion Section -->
+        <section class="bg-[#B8860B] py-16">
+          <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-white mb-8">Promotion</h2>
+  <div class="flex flex-col md:flex-row md:space-x-6 gap-6 justify-center">
+    <!-- Carousel Image Container -->
+    <div class="flex-1 max-w-[600px] rounded-lg overflow-hidden">
+      <img
+        src="https://storage.googleapis.com/a1aa/image/de597f08-f80b-433d-1b25-81ff67642c92.jpg"
+        alt="Promotion carousel image with 5 books displayed horizontally on a red background with Stranger Things logo"
+        class="w-full h-[345px] object-cover rounded-lg"
+        width="600"
+        height="345"
+      />
+    </div>
+
+    <!-- Promotion Cards Container -->
+    <div class="flex flex-col space-y-6 flex-[0.6] max-w-[320px]">
+      <!-- Card 1 -->
+      <div class="bg-gradient-to-r from-[#1a2a4a] to-[#7db8d6] rounded-lg p-4 flex items-center space-x-4">
+        <div class="flex-1 text-white text-xs leading-tight">
+          <p class="opacity-80 mb-1">Professional...</p>
+          <h3 class="font-extrabold text-lg mb-2">Book Ad</h3>
+          <ul class="list-disc list-inside text-[10px] opacity-80 space-y-1">
+            <li>Social Media Ad Design</li>
+            <li>1080px x 1080px</li>
+            <li>Customizable</li>
+          </ul>
+          <p class="text-[8px] opacity-60 mt-2">Design by Dwi</p>
+        </div>
+        <img
+          src="https://storage.googleapis.com/a1aa/image/f2e0fc82-bfbc-4a8f-c147-4d02a5b66022.jpg"
+          alt="Book ad image with Black Roses book cover and promotional text on dark blue background"
+          class="w-[160px] h-[100px] rounded-lg object-cover flex-shrink-0"
+          width="160"
+          height="100"
+        />
+      </div>
+
+      <!-- Card 2 -->
+      <div class="bg-gradient-to-r from-black to-[#6c4bff] rounded-lg p-4 flex items-center space-x-4">
+        <div class="flex-1 text-white text-xs leading-tight">
+          <p class="mb-2">
+            Creative Drives Business Series
+            <span class="text-[#6c4bff] font-extrabold">eBook 1</span>
+          </p>
+          <img
+            src="https://storage.googleapis.com/a1aa/image/2761b4af-6565-4fef-7620-52c0d5db545e.jpg"
+            alt="Creative Drives Business Series eBook 1 cover image with a person and text on black and purple background"
+            class="rounded-lg object-cover w-[160px] h-[100px]"
+            width="160"
+            height="100"
+          />
+        </div>
+        <div class="flex-shrink-0">
+          <img
+            src="https://storage.googleapis.com/a1aa/image/9809197c-426f-4088-0db0-a45f5c6bc7aa.jpg"
+            alt="Green checkmark icon"
+            class="w-6 h-6"
+            width="24"
+            height="24"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+          </div>
+        </section>
+
+        <!-- Category Section -->
+        <section class="py-16 bg-gray-50">
+          <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold mb-8">Category</h2>
+            <div class="grid grid-cols-2 md:grid-cols-5 gap-6">
+              <a href="#" class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow text-center">
+                <img src="https://images.pexels.com/photos/159711/books-bookstore-book-reading-159711.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Favorite Books" class="w-16 h-16 mx-auto mb-4"/>
+                <span class="font-medium">Favorite Books</span>
+              </a>
+              <a href="#" class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow text-center">
+                <img src="https://images.pexels.com/photos/159711/books-bookstore-book-reading-159711.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Import Books" class="w-16 h-16 mx-auto mb-4"/>
+                <span class="font-medium">Import Books</span>
+              </a>
+              <a href="#" class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow text-center">
+                <img src="https://images.pexels.com/photos/159711/books-bookstore-book-reading-159711.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Education Books" class="w-16 h-16 mx-auto mb-4"/>
+                <span class="font-medium">Education Books</span>
+              </a>
+              <a href="#" class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow text-center">
+                <img src="https://images.pexels.com/photos/159711/books-bookstore-book-reading-159711.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Fantasy Books" class="w-16 h-16 mx-auto mb-4"/>
+                <span class="font-medium">Fantasy Books</span>
+              </a>
+              <a href="#" class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow text-center">
+                <img src="https://images.pexels.com/photos/159711/books-bookstore-book-reading-159711.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Stationery" class="w-16 h-16 mx-auto mb-4"/>
+                <span class="font-medium">Stationery</span>
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <!-- Best Seller Books -->
+<section class="mt-12">
+  <section class="mt-14">
+    <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold mb-8">Best Seller</h2>
+    </div>
+    <div class="flex items-center justify-center space-x-6 md:space-x-12 overflow-x-auto py-4">
+      <ul class="flex space-x-6 md:space-x-12 text-center text-sm">
+        <li class="book-item flex flex-col items-center hover:scale-105 transition transform-gpu">
+          <img
+            src="https://storage.googleapis.com/a1aa/image/dc0dacd2-78ab-4557-a15a-4cdad40acb25.jpg"
+            alt="HARRY POTTER"
+            class="rounded-md w-[110px] h-[160px] object-cover"
+            width="110"
+            height="160"
+          />
+          <span class="mt-2 max-w-[110px] truncate">HARRY POTTER</span>
+        </li>
+        <li class="book-item flex flex-col items-center hover:scale-105 transition transform-gpu">
+          <img
+            src="https://storage.googleapis.com/a1aa/image/57bd96c3-6d5b-4c3c-70fc-e4570298a789.jpg"
+            alt="WHERE THE CRAWDADS SING"
+            class="rounded-md w-[110px] h-[160px] object-cover"
+            width="110"
+            height="160"
+          />
+          <span class="mt-2 max-w-[110px] truncate">WHERE THE CRAWDADS SING</span>
+        </li>
+        <li class="book-item flex flex-col items-center hover:scale-105 transition transform-gpu">
+          <img
+            src="https://storage.googleapis.com/a1aa/image/674c330e-3ab7-44e8-66c1-232e061953c2.jpg"
+            alt="THE BALLAD OF LAUREL SPRINGS"
+            class="rounded-md w-[110px] h-[160px] object-cover"
+            width="110"
+            height="160"
+          />
+          <span class="mt-2 max-w-[110px] truncate">THE BALLAD OF LAUREL SPRINGS</span>
+        </li>
+        
+        <li class="book-item flex flex-col items-center hover:scale-105 transition transform-gpu">
+          <img
+            src="https://storage.googleapis.com/a1aa/image/dc0dacd2-78ab-4557-a15a-4cdad40acb25.jpg"
+            alt="HARRY POTTER"
+            class="rounded-md w-[110px] h-[160px] object-cover"
+            width="110"
+            height="160"
+          />
+          <span class="mt-2 max-w-[110px] truncate">HARRY POTTER</span>
+        </li>
+        <li class="book-item flex flex-col items-center hover:scale-105 transition transform-gpu">
+          <img
+            src="https://storage.googleapis.com/a1aa/image/57bd96c3-6d5b-4c3c-70fc-e4570298a789.jpg"
+            alt="WHERE THE CRAWDADS SING"
+            class="rounded-md w-[110px] h-[160px] object-cover"
+            width="110"
+            height="160"
+          />
+          <span class="mt-2 max-w-[110px] truncate">WHERE THE CRAWDADS SING</span>
+        </li>
+        <li class="book-item flex flex-col items-center hover:scale-105 transition transform-gpu">
+          <img
+            src="https://storage.googleapis.com/a1aa/image/674c330e-3ab7-44e8-66c1-232e061953c2.jpg"
+            alt="THE BALLAD OF LAUREL SPRINGS"
+            class="rounded-md w-[110px] h-[160px] object-cover"
+            width="110"
+            height="160"
+          />
+          <span class="mt-2 max-w-[110px] truncate">THE BALLAD OF LAUREL SPRINGS</span>
+        </li>
+        
+        <!-- Tambahkan item lain dengan format sama -->
+
+      </ul>
+    </div>
+  </section>
+</section>
+      </main>
+
+      <!-- Footer -->
+      <footer class="bg-navy-900 text-white">
+        <div class="container mx-auto px-4 py-12">
+          <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div>
+              <h3 class="font-bold text-lg mb-4">Product</h3>
+              <ul class="space-y-2">
+                <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Popular Books</a></li>
+                <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Latest Books</a></li>
+                <li><a href="#" class="text-gray-300 hover:text-white transition-colors">BB Shop</a></li>
+                <li><a href="#" class="text-gray-300 hover:text-white transition-colors">BB Drive</a></li>
+                <li><a href="#" class="text-gray-300 hover:text-white transition-colors">BB Partner</a></li>
+                <li><a href="#" class="text-gray-300 hover:text-white transition-colors">BB Intern</a></li>
+              </ul>
+            </div>
+            
+            <div>
+              <h3 class="font-bold text-lg mb-4">Information</h3>
+              <ul class="space-y-2">
+                <li><a href="#" class="text-gray-300 hover:text-white transition-colors">FAQ</a></li>
+                <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Blog</a></li>
+                <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Help</a></li>
+              </ul>
+            </div>
+            
+            <div>
+              <h3 class="font-bold text-lg mb-4">Company</h3>
+              <ul class="space-y-2">
+                <li><a href="#" class="text-gray-300 hover:text-white transition-colors">About Us</a></li>
+                <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Career</a></li>
+                <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Contact Us</a></li>
+              </ul>
+            </div>
+            
+            <div class="bg-navy-800 p-6 rounded">
+              <h3 class="font-bold text-lg mb-4">Subscribe</h3>
+              <div class="flex mb-4">
+                <input 
+                  type="email" 
+                  placeholder="Email Address" 
+                  class="flex-grow px-3 py-2 rounded-l text-gray-800 focus:outline-none"
+                />
+                <button class="bg-orange-500 hover:bg-orange-600 text-white px-3 py-2 rounded-r transition-colors">
+                  <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                </button>
+              </div>
+              <p class="text-sm text-gray-400">
+                Hi, we are from DS Book. Our goal is to provide the best experience in enjoying and purchasing books.
+              </p>
+            </div>
+          </div>
+          
+          <div class="mt-12 pt-8 border-t border-navy-700 flex flex-col md:flex-row justify-between items-center">
+            <div class="flex items-center text-orange-500 font-bold text-xl mb-4 md:mb-0">
+              <i data-lucide="book-open" class="mr-2"></i>
+              <span>DS Book</span>
+            </div>
+            
+            <div class="flex flex-wrap justify-center space-x-6 mb-4 md:mb-0">
+              <a href="#" class="text-sm text-gray-300 hover:text-white transition-colors">Terms & Conditions</a>
+              <a href="#" class="text-sm text-gray-300 hover:text-white transition-colors">Privacy Policy</a>
+              <a href="#" class="text-sm text-gray-300 hover:text-white transition-colors">Cookies</a>
+            </div>
+            
+            <div class="flex space-x-4">
+              <a href="#" class="text-gray-300 hover:text-white transition-colors">
+                <i data-lucide="facebook" class="w-5 h-5"></i>
+              </a>
+              <a href="#" class="text-gray-300 hover:text-white transition-colors">
+                <i data-lucide="mail" class="w-5 h-5"></i>
+              </a>
+              <a href="#" class="text-gray-300 hover:text-white transition-colors">
+                <i data-lucide="twitter" class="w-5 h-5"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+      lucide.createIcons();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,306 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>
+   Bookstore
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+            <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              orange: {
+                500: '#FF5722',
+                600: '#E64A19',
+              },
+              navy: {
+                700: '#1C2B41',
+                800: '#142236',
+                900: '#0A1629',
+              }
+            },
+          },
+        },
+      }
+    </script>
+
+ </head>
+ <body class="bg-[#b07f0a]">
+  <!-- Header -->
+<header class="bg-white border-b border-gray-200">
+  <div class="container mx-auto px-4 py-3 flex items-center justify-between">
+    <div class="flex items-center space-x-8">
+      <a href="/" class="flex items-center text-orange-500 font-bold text-xl">
+        <i data-lucide="book-open" class="mr-2"></i>
+        <span>DS Book</span>
+      </a>
+
+      <nav class="hidden md:flex items-center space-x-8">
+        <a href="/shop" class="text-gray-800 hover:text-orange-500 transition-colors">Shop</a>
+        <a href="/books" class="text-gray-800 hover:text-orange-500 transition-colors">Books</a>
+        <a href="/dropship" class="text-gray-800 hover:text-orange-500 transition-colors">Dropship</a>
+        <a href="/community" class="text-gray-800 hover:text-orange-500 transition-colors">Community</a>
+      </nav>
+    </div>
+
+    <div class="flex items-center space-x-4">
+      <!-- Ikon keranjang di luar kotak -->
+      <a href="/cart" class="w-9 h-9 flex items-center justify-center hover:bg-gray-100 rounded-full transition-colors">
+        <i data-lucide="shopping-cart" class="w-5 h-5 text-gray-600"></i>
+      </a>
+
+      <!-- Kotak EN -->
+      <div class="border border-gray-300 rounded px-2 py-1">
+        <span class="text-sm font-medium">EN</span>
+      </div>
+
+      <!-- Ikon profil -->
+      <a href="/profile" class="w-9 h-9 flex items-center justify-center bg-gray-100 rounded-full hover:bg-gray-200 transition-colors">
+        <i data-lucide="user" class="w-5 h-5"></i>
+      </a>
+    </div>
+  </div>
+</header>
+  <!-- Main content -->
+  <main class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-6">
+   <!-- Each item container -->
+   <section class="flex flex-col sm:flex-row sm:space-x-6 space-y-4 sm:space-y-0">
+    <div class="flex-shrink-0 rounded-lg bg-[#c19e44] p-1" style="max-width: 240px;">
+     <img src="https://via.placeholder.com/240x140?text=Placeholder" alt="Interior of a bookstore with wooden shelves filled with books and a hanging sign that says BOOKS" class="rounded-lg w-full h-full object-cover"/>
+    </div>
+    <div class="flex-1 rounded-lg bg-[#c19e44] p-6 text-white font-semibold text-base leading-tight">
+     <h2 class="text-lg font-bold mb-2">
+      Sky Books
+     </h2>
+     <p class="mb-2 text-lg font-bold">
+      <span class="text-yellow-300">
+       ⭐ 4.7
+      </span>
+     </p>
+     <p class="mb-4 font-bold text-lg leading-snug">
+      Jalan Sunset Road No. 99, Kuta, Badung, Bali
+     </p>
+     <a class="text-pink-400 font-semibold text-sm flex items-center space-x-1" href="#">
+      <span>
+       Lihat Detail
+      </span>
+      <i class="fas fa-arrow-right text-xs">
+      </i>
+     </a>
+    </div>
+   </section>
+   <section class="flex flex-col sm:flex-row sm:space-x-6 space-y-4 sm:space-y-0">
+    <div class="flex-shrink-0 rounded-lg bg-[#c19e44] p-1" style="max-width: 240px;">
+     <img src="https://via.placeholder.com/240x140?text=Placeholder" alt="Cozy bookstore interior with wooden beams and shelves filled with books" class="rounded-lg w-full h-full object-cover" />
+    </div>
+    <div class="flex-1 rounded-lg bg-[#c19e44] p-6 text-white font-semibold text-base leading-tight">
+     <h2 class="text-lg font-bold mb-2">
+      Reading Time
+     </h2>
+     <p class="mb-2 text-lg font-bold">
+      <span class="text-yellow-300">
+       ⭐ 4.7
+      </span>
+     </p>
+     <p class="mb-4 font-bold text-lg leading-snug">
+      Jalan Raya Ubud No. 14, Ubud, Gianyar, Bali
+     </p>
+     <a class="text-pink-400 font-semibold text-sm flex items-center space-x-1" href="#">
+      <span>
+       Lihat Detail
+      </span>
+      <i class="fas fa-arrow-right text-xs">
+      </i>
+     </a>
+    </div>
+   </section>
+   <section class="flex flex-col sm:flex-row sm:space-x-6 space-y-4 sm:space-y-0">
+    <div class="flex-shrink-0 rounded-lg bg-[#c19e44] p-1" style="max-width: 240px;">
+     <img src="https://via.placeholder.com/240x140?text=Placeholder" alt="Tall bookshelves filled with books in a modern bookstore with a staircase" class="rounded-lg w-full h-full object-cover" />
+    </div>
+    <div class="flex-1 rounded-lg bg-[#c19e44] p-6 text-white font-semibold text-base leading-tight">
+     <h2 class="text-lg font-bold mb-2">
+      Story Letters
+     </h2>
+     <p class="mb-2 text-lg font-bold">
+      <span class="text-yellow-300">
+       ⭐ 4.7
+      </span>
+     </p>
+     <p class="mb-4 font-bold text-lg leading-snug">
+      Jalan Pantai Berawa No. 27, Canggu, Badung, Bali
+     </p>
+     <a class="text-pink-400 font-semibold text-sm flex items-center space-x-1" href="#">
+      <span>
+       Lihat Detail
+      </span>
+      <i class="fas fa-arrow-right text-xs">
+      </i>
+     </a>
+    </div>
+   </section>
+   <section class="flex flex-col sm:flex-row sm:space-x-6 space-y-4 sm:space-y-0">
+    <div class="flex-shrink-0 rounded-lg bg-[#c19e44] p-1" style="max-width: 240px;">
+     <img src="https://via.placeholder.com/240x140?text=Placeholder" alt="Large library with wooden bookshelves and a glass ceiling letting in natural light" class="rounded-lg w-full h-full object-cover" />
+    </div>
+    <div class="flex-1 rounded-lg bg-[#c19e44] p-6 text-white font-semibold text-base leading-tight">
+     <h2 class="text-lg font-bold mb-2">
+      Imagination Kiosk
+     </h2>
+     <p class="mb-2 text-lg font-bold">
+      <span class="text-yellow-300">
+       ⭐ 4.7
+      </span>
+     </p>
+     <p class="mb-4 font-bold text-lg leading-snug">
+      Jalan Danau Tamblingan No. 10, Sanur, Denpasar, Bali
+     </p>
+     <a class="text-pink-400 font-semibold text-sm flex items-center space-x-1" href="#">
+      <span>
+       Lihat Detail
+      </span>
+      <i class="fas fa-arrow-right text-xs">
+      </i>
+     </a>
+    </div>
+   </section>
+   <section class="flex flex-col sm:flex-row sm:space-x-6 space-y-4 sm:space-y-0">
+    <div class="flex-shrink-0 rounded-lg bg-[#c19e44] p-1" style="max-width: 240px;">
+     <img src="https://via.placeholder.com/240x140?text=Placeholder" alt="Bright bookstore interior with curved bookshelves and white walls" class="rounded-lg w-full h-full object-cover" />
+    </div>
+    <div class="flex-1 rounded-lg bg-[#c19e44] p-6 text-white font-semibold text-base leading-tight">
+     <h2 class="text-lg font-bold mb-2">
+      Literacy Pages
+     </h2>
+     <p class="mb-2 text-lg font-bold">
+      <span class="text-yellow-300">
+       ⭐ 4.7
+      </span>
+     </p>
+     <p class="mb-4 font-bold text-lg leading-snug">
+      Jalan Raya Seminyak No. 88, Seminyak, Badung, Bali
+     </p>
+     <a class="text-pink-400 font-semibold text-sm flex items-center space-x-1" href="#">
+      <span>
+       Lihat Detail
+      </span>
+      <i class="fas fa-arrow-right text-xs">
+      </i>
+     </a>
+    </div>
+   </section>
+   <section class="flex flex-col sm:flex-row sm:space-x-6 space-y-4 sm:space-y-0">
+    <div class="flex-shrink-0 rounded-lg bg-[#c19e44] p-1" style="max-width: 240px;">
+     <img src="https://via.placeholder.com/240x140?text=Placeholder" alt="Cozy bookstore with wooden shelves and colorful books arranged neatly" class="rounded-lg w-full h-full object-cover" />
+    </div>
+    <div class="flex-1 rounded-lg bg-[#c19e44] p-6 text-white font-semibold text-base leading-tight">
+     <h2 class="text-lg font-bold mb-2">
+      Forest Library
+     </h2>
+     <p class="mb-2 text-lg font-bold">
+      <span class="text-yellow-300">
+       ⭐ 4.7
+      </span>
+     </p>
+     <p class="mb-4 font-bold text-lg leading-snug">
+      Jalan Raya Kuta No. 25, Kuta, Badung, Bali
+     </p>
+     <a class="text-pink-400 font-semibold text-sm flex items-center space-x-1" href="#">
+      <span>
+       Lihat Detail
+      </span>
+      <i class="fas fa-arrow-right text-xs">
+      </i>
+     </a>
+    </div>
+   </section>
+  </main>
+  <!-- Footer -->
+      <footer class="bg-navy-900 text-white">
+        <div class="container mx-auto px-4 py-12">
+          <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div>
+              <h3 class="font-bold text-lg mb-4">Product</h3>
+              <ul class="space-y-2">
+                <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Popular Books</a></li>
+                <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Latest Books</a></li>
+                <li><a href="#" class="text-gray-300 hover:text-white transition-colors">BB Shop</a></li>
+                <li><a href="#" class="text-gray-300 hover:text-white transition-colors">BB Drive</a></li>
+                <li><a href="#" class="text-gray-300 hover:text-white transition-colors">BB Partner</a></li>
+                <li><a href="#" class="text-gray-300 hover:text-white transition-colors">BB Intern</a></li>
+              </ul>
+            </div>
+            
+            <div>
+              <h3 class="font-bold text-lg mb-4">Information</h3>
+              <ul class="space-y-2">
+                <li><a href="#" class="text-gray-300 hover:text-white transition-colors">FAQ</a></li>
+                <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Blog</a></li>
+                <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Help</a></li>
+              </ul>
+            </div>
+            
+            <div>
+              <h3 class="font-bold text-lg mb-4">Company</h3>
+              <ul class="space-y-2">
+                <li><a href="#" class="text-gray-300 hover:text-white transition-colors">About Us</a></li>
+                <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Career</a></li>
+                <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Contact Us</a></li>
+              </ul>
+            </div>
+            
+            <div class="bg-navy-800 p-6 rounded">
+              <h3 class="font-bold text-lg mb-4">Subscribe</h3>
+              <div class="flex mb-4">
+                <input 
+                  type="email" 
+                  placeholder="Email Address" 
+                  class="flex-grow px-3 py-2 rounded-l text-gray-800 focus:outline-none"
+                />
+                <button class="bg-orange-500 hover:bg-orange-600 text-white px-3 py-2 rounded-r transition-colors">
+                  <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                </button>
+              </div>
+              <p class="text-sm text-gray-400">
+                Hi, we are from DS Book. Our goal is to provide the best experience in enjoying and purchasing books.
+              </p>
+            </div>
+          </div>
+          
+          <div class="mt-12 pt-8 border-t border-navy-700 flex flex-col md:flex-row justify-between items-center">
+            <div class="flex items-center text-orange-500 font-bold text-xl mb-4 md:mb-0">
+              <i data-lucide="book-open" class="mr-2"></i>
+              <span>DS Book</span>
+            </div>
+            
+            <div class="flex flex-wrap justify-center space-x-6 mb-4 md:mb-0">
+              <a href="#" class="text-sm text-gray-300 hover:text-white transition-colors">Terms & Conditions</a>
+              <a href="#" class="text-sm text-gray-300 hover:text-white transition-colors">Privacy Policy</a>
+              <a href="#" class="text-sm text-gray-300 hover:text-white transition-colors">Cookies</a>
+            </div>
+            
+            <div class="flex space-x-4">
+              <a href="#" class="text-gray-300 hover:text-white transition-colors">
+                <i data-lucide="facebook" class="w-5 h-5"></i>
+              </a>
+              <a href="#" class="text-gray-300 hover:text-white transition-colors">
+                <i data-lucide="mail" class="w-5 h-5"></i>
+              </a>
+              <a href="#" class="text-gray-300 hover:text-white transition-colors">
+                <i data-lucide="twitter" class="w-5 h-5"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </footer>
+              <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+      lucide.createIcons();
+    </script>
+ </body>
+</html>
