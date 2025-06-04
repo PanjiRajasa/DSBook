@@ -1,201 +1,459 @@
 <html lang="en">
- <head>
-  <meta charset="utf-8"/>
-  <meta content="width=device-width, initial-scale=1" name="viewport"/>
-  <title>
-   DS Book Login
-  </title>
-  <script src="https://cdn.tailwindcss.com">
-  </script>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
-  <link href="https://fonts.googleapis.com/css2?family=Inter&amp;display=swap" rel="stylesheet"/>
-        <script>
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <title>DS Book Login</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script>
       tailwind.config = {
         theme: {
           extend: {
             colors: {
               orange: {
-                500: '#FF5722',
-                600: '#E64A19',
+                500: "#FF5722",
+                600: "#E64A19",
               },
               navy: {
-                700: '#1C2B41',
-                800: '#142236',
-                900: '#0A1629',
-              }
+                700: "#1C2B41",
+                800: "#142236",
+                900: "#0A1629",
+              },
             },
           },
         },
-      }
+      };
     </script>
- </head>
- <body class="bg-[#fbd24a] flex flex-col min-h-screen">
-  <!-- Header -->
-<header class="bg-white border-b border-gray-200">
-  <div class="container mx-auto px-4 py-3 flex items-center justify-between">
-    <div class="flex items-center space-x-8">
-      <a href="/" class="flex items-center text-orange-500 font-bold text-xl">
-        <i data-lucide="book-open" class="mr-2"></i>
-        <span>DS Book</span>
-      </a>
-    </div>
+  </head>
+  <body class="bg-[#fbd24a] flex flex-col min-h-screen">
+    <!-- Header -->
+    <header class="bg-white border-b border-gray-200">
+      <div
+        class="container mx-auto px-4 py-3 flex items-center justify-between"
+      >
+        <div class="flex items-center space-x-8">
+          <a
+            href=""
+            class="flex items-center text-orange-500 font-bold text-xl"
+          >
+            <i data-lucide="book-open" class="mr-2"></i>
+            <span>DS Book</span>
+          </a>
+        </div>
+      </div>
+    </header>
 
-  </div>
-</header>
-  <!-- Main content -->
-  <main class="flex-grow max-w-3xl w-full mx-auto px-6 py-12">
-   <h1 class="font-extrabold text-3xl mb-8 select-none">
-    Login
-   </h1>
-   <form action="#" class="space-y-6" method="POST" novalidate="">
-    <div>
-     <label class="block mb-1 text-base font-normal text-black select-none" for="email">
-      Email
-     </label>
-     <input autocomplete="email" class="w-full rounded-md border border-black px-4 py-3 text-base font-normal text-black placeholder:text-black placeholder:opacity-50 focus:outline-none focus:ring-2 focus:ring-black" id="email" name="email" required="" type="email"/>
-    </div>
-    <div>
-     <label class="block mb-1 text-base font-normal text-black select-none flex justify-between items-center" for="password">
-      Password
-      <button aria-label="Toggle password visibility" class="flex items-center space-x-1 text-black font-normal text-sm focus:outline-none" type="button">
-       <i class="fas fa-eye-slash">
-       </i>
-       <span>
-        Hide
-       </span>
-      </button>
-     </label>
-     <input autocomplete="current-password" class="w-full rounded-md border border-black px-4 py-3 text-base font-normal text-black placeholder:text-black placeholder:opacity-50 focus:outline-none focus:ring-2 focus:ring-black" id="password" name="password" required="" type="password"/>
-    </div>
-    <div class="flex items-center space-x-2">
-     <input checked="" class="w-4 h-4 text-black border-black rounded focus:ring-black" id="remember" name="remember" type="checkbox"/>
-     <label class="text-base font-normal text-black select-none" for="remember">
-      Remember me
-     </label>
-    </div>
-    <p class="text-base font-normal text-black max-w-xl">
-     By signing in, you agree to the
-     <a class="underline hover:text-black hover:no-underline" href="#">
-      Terms of Use
-     </a>
-     and
-     <a class="underline hover:text-black hover:no-underline" href="#">
-      Privacy Policy.
-     </a>
-    </p>
-    <button class="w-full rounded-xl border border-black bg-white text-black text-base font-normal py-3 mt-6" type="submit">
-     Login
-    </button>
-   </form>
-   <div class="flex items-center my-8 space-x-4">
-    <hr class="flex-grow border-black"/>
-    <span class="font-semibold text-black select-none">
-     Or Continue With
-    </span>
-    <hr class="flex-grow border-black"/>
-   </div>
-   <div class="flex justify-center space-x-10 text-black text-3xl">
-    <button aria-label="Continue with Facebook" class="focus:outline-none">
-     <i class="fab fa-facebook-f">
-     </i>
-    </button>
-    <button aria-label="Continue with Google" class="focus:outline-none">
-     <i class="fab fa-google">
-     </i>
-    </button>
-    <button aria-label="Continue with X" class="focus:outline-none">
-     <i class="fab fa-twitter">
-     </i>
-    </button>
-   </div>
-   <p class="text-base font-normal text-black mt-8 text-center">
-    Don’t have an account?
-    <a class="underline hover:text-black hover:no-underline" href="#">
-     Register
-    </a>
-   </p>
-  </main>
-  <!-- Footer -->
-      <footer class="bg-navy-900 text-white">
-        <div class="container mx-auto px-4 py-12">
-          <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-            <div>
-              <h3 class="font-bold text-lg mb-4">Product</h3>
-              <ul class="space-y-2">
-                <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Popular Books</a></li>
-                <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Latest Books</a></li>
-                <li><a href="#" class="text-gray-300 hover:text-white transition-colors">BB Shop</a></li>
-                <li><a href="#" class="text-gray-300 hover:text-white transition-colors">BB Drive</a></li>
-                <li><a href="#" class="text-gray-300 hover:text-white transition-colors">BB Partner</a></li>
-                <li><a href="#" class="text-gray-300 hover:text-white transition-colors">BB Intern</a></li>
-              </ul>
-            </div>
-            
-            <div>
-              <h3 class="font-bold text-lg mb-4">Information</h3>
-              <ul class="space-y-2">
-                <li><a href="#" class="text-gray-300 hover:text-white transition-colors">FAQ</a></li>
-                <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Blog</a></li>
-                <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Help</a></li>
-              </ul>
-            </div>
-            
-            <div>
-              <h3 class="font-bold text-lg mb-4">Company</h3>
-              <ul class="space-y-2">
-                <li><a href="#" class="text-gray-300 hover:text-white transition-colors">About Us</a></li>
-                <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Career</a></li>
-                <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Contact Us</a></li>
-              </ul>
-            </div>
-            
+    <!-- Main content -->
+    <main class="flex-grow max-w-3xl w-full mx-auto px-6 py-12">
+      <h1 class="font-extrabold text-3xl mb-8 select-none">Login</h1>
+
+      <!-- Login form -->
+      <form class="space-y-6" novalidate="" id="form-login">
+        <div>
+          <!-- Email -->
+          <label
+            class="block mb-1 text-base font-normal text-black select-none"
+            for="email"
+          >
+            Email
+          </label>
+          <input
+            autocomplete="email"
+            class="w-full rounded-md border border-black px-4 py-3 text-base font-normal text-black placeholder:text-black placeholder:opacity-50 focus:outline-none focus:ring-2 focus:ring-black"
+            id="email"
+            name="email"
+            required
+            type="email"
+          />
+        </div>
+
+        <div>
+          <!-- Password -->
+          <label
+            class="block mb-1 text-base font-normal text-black select-none flex justify-between items-center"
+            for="password"
+          >
+            Password
+            <button
+              aria-label="Toggle password visibility"
+              class="flex items-center space-x-1 text-black font-normal text-sm focus:outline-none"
+              type="button"
+            >
+              <i class="fas fa-eye-slash"> </i>
+              <span> Hide </span>
+            </button>
+          </label>
+          <input
+            autocomplete="current-password"
+            class="w-full rounded-md border border-black px-4 py-3 text-base font-normal text-black placeholder:text-black placeholder:opacity-50 focus:outline-none focus:ring-2 focus:ring-black"
+            id="password"
+            name="password"
+            required
+            type="password"
+          />
+        </div>
+
+        <div class="flex items-center space-x-2">
+          <input
+            checked=""
+            class="w-4 h-4 text-black border-black rounded focus:ring-black"
+            id="remember"
+            name="remember"
+            type="checkbox"
+          />
+          <label
+            class="text-base font-normal text-black select-none"
+            for="remember"
+          >
+            Remember me
+          </label>
+        </div>
+        <p class="text-base font-normal text-black max-w-xl">
+          By signing in, you agree to the
+          <a class="underline hover:text-black hover:no-underline" href="#">
+            Terms of Use
+          </a>
+          and
+          <a class="underline hover:text-black hover:no-underline" href="#">
+            Privacy Policy.
+          </a>
+        </p>
+
+        <!-- Button Login -->
+        <button
+          id="buttonSubmit"
+          class="w-full rounded-xl border border-black bg-white text-black text-base font-normal py-3 mt-6"
+          type="submit"
+        >
+          Login
+        </button>
+      </form>
+
+      <div class="flex items-center my-8 space-x-4">
+        <hr class="flex-grow border-black" />
+        <span class="font-semibold text-black select-none">
+          Or Continue With
+        </span>
+        <hr class="flex-grow border-black" />
+      </div>
+      <div class="flex justify-center space-x-10 text-black text-3xl">
+        <button aria-label="Continue with Facebook" class="focus:outline-none">
+          <i class="fab fa-facebook-f"> </i>
+        </button>
+        <button aria-label="Continue with Google" class="focus:outline-none">
+          <i class="fab fa-google"> </i>
+        </button>
+        <button aria-label="Continue with X" class="focus:outline-none">
+          <i class="fab fa-twitter"> </i>
+        </button>
+      </div>
+      <p class="text-base font-normal text-black mt-8 text-center">
+        Don’t have an account?
+        <a class="underline hover:text-black hover:no-underline" href="./register.html">
+          Register
+        </a>
+      </p>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-navy-900 text-white">
+      <div class="container mx-auto px-4 py-12">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div>
+            <h3 class="font-bold text-lg mb-4">Product</h3>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-300 hover:text-white transition-colors"
+                  >Popular Books</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-300 hover:text-white transition-colors"
+                  >Latest Books</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-300 hover:text-white transition-colors"
+                  >BB Shop</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-300 hover:text-white transition-colors"
+                  >BB Drive</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-300 hover:text-white transition-colors"
+                  >BB Partner</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-300 hover:text-white transition-colors"
+                  >BB Intern</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="font-bold text-lg mb-4">Information</h3>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-300 hover:text-white transition-colors"
+                  >FAQ</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-300 hover:text-white transition-colors"
+                  >Blog</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-300 hover:text-white transition-colors"
+                  >Help</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="font-bold text-lg mb-4">Company</h3>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-300 hover:text-white transition-colors"
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-300 hover:text-white transition-colors"
+                  >Career</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-300 hover:text-white transition-colors"
+                  >Contact Us</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Subscribe -->
             <div class="bg-navy-800 p-6 rounded">
+              <!-- Title -->
               <h3 class="font-bold text-lg mb-4">Subscribe</h3>
+
+
               <div class="flex mb-4">
+
+                <!-- Email input -->
                 <input 
+                  id="subscribe-email"
                   type="email" 
                   placeholder="Email Address" 
                   class="flex-grow px-3 py-2 rounded-l text-gray-800 focus:outline-none"
                 />
-                <button class="bg-orange-500 hover:bg-orange-600 text-white px-3 py-2 rounded-r transition-colors">
+
+                <!-- Icon send button -->
+                <button 
+                id="subscribe-button"
+                class="bg-orange-500 hover:bg-orange-600 text-white px-3 py-2 rounded-r transition-colors">
                   <i data-lucide="arrow-right" class="w-5 h-5"></i>
                 </button>
               </div>
+
+              <!-- Text under subscribe input -->
               <p class="text-sm text-gray-400">
                 Hi, we are from DS Book. Our goal is to provide the best experience in enjoying and purchasing books.
               </p>
             </div>
+
+        <div
+          class="mt-12 pt-8 border-t border-navy-700 flex flex-col md:flex-row justify-between items-center"
+        >
+          <div
+            class="flex items-center text-orange-500 font-bold text-xl mb-4 md:mb-0"
+          >
+            <i data-lucide="book-open" class="mr-2"></i>
+            <span>DS Book</span>
           </div>
-          
-          <div class="mt-12 pt-8 border-t border-navy-700 flex flex-col md:flex-row justify-between items-center">
-            <div class="flex items-center text-orange-500 font-bold text-xl mb-4 md:mb-0">
-              <i data-lucide="book-open" class="mr-2"></i>
-              <span>DS Book</span>
-            </div>
-            
-            <div class="flex flex-wrap justify-center space-x-6 mb-4 md:mb-0">
-              <a href="#" class="text-sm text-gray-300 hover:text-white transition-colors">Terms & Conditions</a>
-              <a href="#" class="text-sm text-gray-300 hover:text-white transition-colors">Privacy Policy</a>
-              <a href="#" class="text-sm text-gray-300 hover:text-white transition-colors">Cookies</a>
-            </div>
-            
-            <div class="flex space-x-4">
-              <a href="#" class="text-gray-300 hover:text-white transition-colors">
-                <i data-lucide="facebook" class="w-5 h-5"></i>
-              </a>
-              <a href="#" class="text-gray-300 hover:text-white transition-colors">
-                <i data-lucide="mail" class="w-5 h-5"></i>
-              </a>
-              <a href="#" class="text-gray-300 hover:text-white transition-colors">
-                <i data-lucide="twitter" class="w-5 h-5"></i>
-              </a>
-            </div>
+
+          <div class="flex flex-wrap justify-center space-x-6 mb-4 md:mb-0">
+            <a
+              href="#"
+              class="text-sm text-gray-300 hover:text-white transition-colors"
+              >Terms & Conditions</a
+            >
+            <a
+              href="#"
+              class="text-sm text-gray-300 hover:text-white transition-colors"
+              >Privacy Policy</a
+            >
+            <a
+              href="#"
+              class="text-sm text-gray-300 hover:text-white transition-colors"
+              >Cookies</a
+            >
+          </div>
+
+          <div class="flex space-x-4">
+            <a
+              href="#"
+              class="text-gray-300 hover:text-white transition-colors"
+            >
+              <i data-lucide="facebook" class="w-5 h-5"></i>
+            </a>
+            <a
+              href="#"
+              class="text-gray-300 hover:text-white transition-colors"
+            >
+              <i data-lucide="mail" class="w-5 h-5"></i>
+            </a>
+            <a
+              href="#"
+              class="text-gray-300 hover:text-white transition-colors"
+            >
+              <i data-lucide="twitter" class="w-5 h-5"></i>
+            </a>
           </div>
         </div>
-      </footer>
-      <script src="https://unpkg.com/lucide@latest"></script>
+      </div>
+    </footer>
+    <script src="https://unpkg.com/lucide@latest"></script>
+
     <script>
       lucide.createIcons();
     </script>
- </body>
+
+    <!-- Login logic -->
+    <script type="module">
+      import { signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-auth.js";
+      import { auth } from "./firebase-config.js";
+
+      // Tangkap form submit
+      const form = document.getElementById("form-login");
+
+      form.addEventListener("submit", async (e) => {
+        e.preventDefault(); //Hindari reload halaman
+
+        //ambil nilai isi form
+        const email = document.getElementById("email").value;
+        const password = document.getElementById("password").value;
+
+        //login logic
+        try {
+          // Login ke firebase auth
+          const userCredential = await signInWithEmailAndPassword(
+            auth,
+            email,
+            password
+          );
+
+          //  Ambil token dari user yang sudah login
+          const idToken = await userCredential.user.getIdToken();
+
+          // Kirim token ke backend untuk verifikasi
+          const response = await fetch(
+            "http://localhost:3000/users/verify-token",
+            {
+              method: "POST",
+              headers: {
+                "content-type": "application/json",
+              },
+              body: JSON.stringify({ idToken }),
+            }
+          );
+
+          // Handle respon dari backend
+          const result = await response.json();
+
+          if (response.ok) {
+            // Jika berhasil diverifikasi, lanjutkan ke halaman lain atau tampilkan pesan
+            alert("Login success! UID: " + result.uid);
+
+            //pindah page
+            window.location = "./homerework.html";
+          } else {
+            // Tampilkan error dari backend
+            alert("Gagal verifikasi token: " + result.error);
+          }
+        } catch (error) {
+          //tampilkan pesan jika gagal login
+          alert("Failed login: " + error.message);
+        }
+      });
+
+      // Subscribe logic
+      document.getElementById("subscribe-button").addEventListener("click", async () => {
+        //ambil id dan nilai trim dari input email
+        const emailInput = document.getElementById("subscribe-email");
+        const email = emailInput.value.trim();
+
+          if (!email) {
+            alert("Please enter a valid email.");
+            return;
+          }
+
+          try {
+            
+            const response = await fetch("http://localhost:3000/users/subscribe", {
+              method: "POST",
+              headers: {
+                "content-type": "application/json"
+              },
+
+              body: JSON.stringify({email}) //use the email input as the body value
+            });
+
+            //result
+            const result = await response.json();
+
+            if (response.ok) {
+              alert("Subscription successful!");
+              emailInput.value = ""; // clear input
+
+            } else {
+              alert("Subscription failed: " + result.error);
+            }
+
+
+
+          } catch (error) {
+            console.error("Error subscribing:", err);
+            alert("An unexpected error occurred.");
+          }
+      });
+    
+    </script>
+  </body>
 </html>

@@ -35,7 +35,7 @@
 <header class="bg-white border-b border-gray-200">
   <div class="container mx-auto px-4 py-3 flex items-center justify-between">
     <div class="flex items-center space-x-8">
-      <a href="/" class="flex items-center text-orange-500 font-bold text-xl">
+      <a href="" class="flex items-center text-orange-500 font-bold text-xl">
         <i data-lucide="book-open" class="mr-2"></i>
         <span>DS Book</span>
       </a>
@@ -45,48 +45,83 @@
 </header>
   <!-- Main content -->
   <main class="flex-grow max-w-3xl w-full mx-auto px-6 py-12">
+
+    <!-- Title -->
    <h1 class="font-extrabold text-3xl mb-8 select-none">
-    Login
+    Register
    </h1>
-   <form action="#" class="space-y-6" method="POST" novalidate="">
+
+   <!-- Signup form -->
+   <form id="signup-form" class="space-y-6" method="POST" novalidate="">
+
     <div>
-     <label class="block mb-1 text-base font-normal text-black select-none" for="email">
+
+     <!-- Username -->
+     <label class="block mb-1 text-base font-normal text-black select-none" for="username">
       Username
      </label>
-     <input autocomplete="email" class="w-full rounded-md border border-black px-4 py-3 text-base font-normal text-black placeholder:text-black placeholder:opacity-50 focus:outline-none focus:ring-2 focus:ring-black" id="email" name="email" required="" type="email"/>
+
+     <input  id="username" name="username" type="text" autocomplete="username" required class="w-full rounded-md border border-black px-4 py-3 text-base font-normal text-black placeholder:text-black placeholder:opacity-50 focus:outline-none focus:ring-2 focus:ring-black"/>
+
     </div>
+
     <div>
+
+     <!-- Email -->
      <label class="block mb-1 text-base font-normal text-black select-none" for="email">
       Email
      </label>
-     <input autocomplete="email" class="w-full rounded-md border border-black px-4 py-3 text-base font-normal text-black placeholder:text-black placeholder:opacity-50 focus:outline-none focus:ring-2 focus:ring-black" id="email" name="email" required="" type="email"/>
+
+     <input  id="email" name="email" type="email" autocomplete="email" required class="w-full rounded-md border border-black px-4 py-3 text-base font-normal text-black placeholder:text-black placeholder:opacity-50 focus:outline-none focus:ring-2 focus:ring-black"/>
+
     </div>
+
     <div>
+
+     <!-- Password -->
      <label class="block mb-1 text-base font-normal text-black select-none flex justify-between items-center" for="password">
       Password
-      <button aria-label="Toggle password visibility" class="flex items-center space-x-1 text-black font-normal text-sm focus:outline-none" type="button">
-       <i class="fas fa-eye-slash">
-       </i>
-       <span>
-        Hide
-       </span>
-      </button>
-     </label>
-     <input autocomplete="current-password" class="w-full rounded-md border border-black px-4 py-3 text-base font-normal text-black placeholder:text-black placeholder:opacity-50 focus:outline-none focus:ring-2 focus:ring-black" id="password" name="password" required="" type="password"/>
+
+        <button aria-label="Toggle password visibility" class="flex items-center space-x-1 text-black font-normal text-sm focus:outline-none" type="button">
+
+        <i class="fas fa-eye-slash">
+        </i>
+
+        <span>
+          Hide
+        </span>
+
+        </button>
+
+      </label>
+
+     <input  id="password" name="password" type="password" autocomplete="new-password" required class="w-full rounded-md border border-black px-4 py-3 text-base font-normal text-black placeholder:text-black placeholder:opacity-50 focus:outline-none focus:ring-2 focus:ring-black"/>
+
     </div>
+
     <div>
-     <label class="block mb-1 text-base font-normal text-black select-none flex justify-between items-center" for="password">
+
+      <!-- Confirm Password -->
+      <label class="block mb-1 text-base font-normal text-black select-none flex justify-between items-center" for="confirm-password">
       Confirm Password
-      <button aria-label="Toggle password visibility" class="flex items-center space-x-1 text-black font-normal text-sm focus:outline-none" type="button">
-       <i class="fas fa-eye-slash">
-       </i>
-       <span>
-        Hide
-       </span>
-      </button>
-     </label>
-     <input autocomplete="current-password" class="w-full rounded-md border border-black px-4 py-3 text-base font-normal text-black placeholder:text-black placeholder:opacity-50 focus:outline-none focus:ring-2 focus:ring-black" id="password" name="password" required="" type="password"/>
+
+        <button aria-label="Toggle password visibility" class="flex items-center space-x-1 text-black font-normal text-sm focus:outline-none" type="button">
+
+        <i class="fas fa-eye-slash">
+        </i>
+
+        <span>
+          Hide
+        </span>
+
+        </button>
+
+      </label>
+
+      <input  id="confirm-password" name="confirm-password" type="password" autocomplete="new-password" required class="w-full rounded-md border border-black px-4 py-3 text-base font-normal text-black placeholder:text-black placeholder:opacity-50 focus:outline-none focus:ring-2 focus:ring-black"/>
+
     </div>
+
     <div class="flex items-center space-x-2">
      <input checked="" class="w-4 h-4 text-black border-black rounded focus:ring-black" id="remember" name="remember" type="checkbox"/>
      <label class="text-base font-normal text-black select-none" for="remember">
@@ -98,9 +133,12 @@
      </a>
     </p>
     <button class="w-full rounded-xl border border-black bg-white text-black text-base font-normal py-3 mt-6" type="submit">
-     Login
+     Register
     </button>
    </form>
+
+
+
    <div class="flex items-center my-8 space-x-4">
     <hr class="flex-grow border-black"/>
     <span class="font-semibold text-black select-none">
@@ -124,11 +162,12 @@
    </div>
    <p class="text-base font-normal text-black mt-8 text-center">
     Have an account?
-    <a class="underline hover:text-black hover:no-underline" href="#">
+    <a class="underline hover:text-black hover:no-underline" href="./login.html">
      Login
     </a>
    </p>
   </main>
+
   <!-- Footer -->
       <footer class="bg-navy-900 text-white">
         <div class="container mx-auto px-4 py-12">
@@ -208,7 +247,66 @@
         </div>
       </footer>
       <script src="https://unpkg.com/lucide@latest"></script>
-    <script>
-      lucide.createIcons();
-    </script> </body>
+
+      <!-- Client Side -->
+      <script>
+        lucide.createIcons();
+
+        //Signup and connect to API
+        document.getElementById("signup-form").addEventListener("submit", async (e) => {
+          e.preventDefault();
+
+          // Select the form inputs
+          const username = document.getElementById("username").value;
+          const email = document.getElementById("email").value;
+          const password = document.getElementById("password").value;
+          const confirmPassword = document.getElementById("confirm-password").value;
+
+          if (password !== confirmPassword) {
+            alert("Passwords do not match!");
+            return;
+          }
+
+          //Fetch API
+          try {
+            
+            const response = await fetch("http://localhost:3000/users/signup", {
+
+              method: "POST",
+              headers: {
+                "content-type": "application/json"
+              },
+              body: JSON.stringify({username, email, password}),
+
+            });
+
+            const data = await response.json();
+
+            if(response.ok) {
+
+              alert("Signup successful! UID: " + data.uid);
+
+              //pindah page
+              window.location = "./homerework.html";
+            } else {
+
+              if(response.status == 409) {
+                alert("Signup failed: " + data.error); // Menampilkan pesan "Email already registered..."
+              } else if(response.status == 400) {
+                alert("Signup failed: " + data.error); // Menampilkan pesan "Username, Email, and Password are required."
+
+              } else {
+                alert("Signup failed: " + (data.error || "An unknown error occurred.")); // Menampilkan error lainnya
+              }
+
+            }
+
+          } catch (error) {
+              console.error("Error connecting to server:", error); //Display the error to the console
+              alert("Error connecting to server. Please try again later");
+          }
+
+        });
+      </script> 
+    </body>
 </html>
