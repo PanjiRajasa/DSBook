@@ -35,17 +35,18 @@
 <header class="bg-white border-b border-gray-200">
   <div class="container mx-auto px-4 py-3 flex items-center justify-between">
     <div class="flex items-center space-x-8">
-      <a href="/" class="flex items-center text-orange-500 font-bold text-xl">
+      <a href="" class="flex items-center text-orange-500 font-bold text-xl">
         <i data-lucide="book-open" class="mr-2"></i>
         <span>DS Book </span>
       </a>
     </div>
 
    <nav class="flex items-center space-x-6 text-sm font-semibold">
-    <a class="text-black hover:underline" href="#">
+    <a class="text-black hover:underline" href="./login.html">
      Login
     </a>
-    <button class="bg-[#e2e2e2] text-black font-semibold rounded px-3 py-1 text-sm hover:bg-[#cfcfcf] transition" type="button">
+
+    <button id="get-started-button" class="bg-[#e2e2e2] text-black font-semibold rounded px-3 py-1 text-sm hover:bg-[#cfcfcf] transition" type="button">
      Get Started
     </button>
    </nav>
@@ -64,7 +65,7 @@
           fiction, non-fiction, to classic literature—we offer a selection that
           suits everyone.
      </p>
-     <a class="text-pink-300 font-semibold text-sm inline-flex items-center space-x-1 hover:underline" href="#">
+     <a class="text-pink-300 font-semibold text-sm inline-flex items-center space-x-1 hover:underline" id="start-link">
       <span>
        Start For Free
       </span>
@@ -188,22 +189,37 @@
               </ul>
             </div>
             
+            <!-- Subscribe -->
             <div class="bg-navy-800 p-6 rounded">
+              <!-- Title -->
               <h3 class="font-bold text-lg mb-4">Subscribe</h3>
+
+
               <div class="flex mb-4">
+
+                <!-- Email input -->
                 <input 
+                  id="subscribe-email"
                   type="email" 
                   placeholder="Email Address" 
                   class="flex-grow px-3 py-2 rounded-l text-gray-800 focus:outline-none"
                 />
-                <button class="bg-orange-500 hover:bg-orange-600 text-white px-3 py-2 rounded-r transition-colors">
+
+                <!-- Icon send button -->
+                <button 
+                id="subscribe-button"
+                class="bg-orange-500 hover:bg-orange-600 text-white px-3 py-2 rounded-r transition-colors">
                   <i data-lucide="arrow-right" class="w-5 h-5"></i>
                 </button>
               </div>
+
+              <!-- Text under subscribe input -->
               <p class="text-sm text-gray-400">
                 Hi, we are from DS Book. Our goal is to provide the best experience in enjoying and purchasing books.
               </p>
             </div>
+
+
           </div>
           
           <div class="mt-12 pt-8 border-t border-navy-700 flex flex-col md:flex-row justify-between items-center">
@@ -236,6 +252,58 @@
     <script src="https://unpkg.com/lucide@latest"></script>
     <script>
       lucide.createIcons();
+    </script>
+
+    <script type="module">
+      // Subscribe logic
+      document.getElementById("subscribe-button").addEventListener("click", async () => {
+        //ambil id dan nilai trim dari input email
+        const emailInput = document.getElementById("subscribe-email");
+        const email = emailInput.value.trim();
+
+          if (!email) {
+            alert("Please enter a valid email.");
+            return;
+          }
+
+          try {
+            
+            const response = await fetch("http://localhost:3000/users/subscribe", {
+              method: "POST",
+              headers: {
+                "content-type": "application/json"
+              },
+
+              body: JSON.stringify({email}) //use the email input as the body value
+            });
+
+            //result
+            const result = await response.json();
+
+            if (response.ok) {
+              alert("Subscription successful!");
+              emailInput.value = ""; // clear input
+
+            } else {
+              alert("Subscription failed: " + result.error);
+            }
+
+
+
+          } catch (error) {
+            console.error("Error subscribing:", err);
+            alert("An unexpected error occurred.");
+          }
+      });
+      
+      // Get started button and link
+      document.getElementById("get-started-button").addEventListener("click", function() {
+        window.location = "./login.html";
+      });
+
+      document.getElementById("start-link").addEventListener("click", function() {
+        window.location = "./login.html";
+      });
     </script>
  </body>
 </html>
