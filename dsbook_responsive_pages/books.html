@@ -1,0 +1,353 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>
+   DS Book
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+            <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              orange: {
+                500: '#FF5722',
+                600: '#E64A19',
+              },
+              navy: {
+                700: '#1C2B41',
+                800: '#142236',
+                900: '#0A1629',
+              }
+            },
+          },
+        },
+      }
+    </script>
+
+  <style>
+   body 
+    .book-item img {
+      width: 140px;
+      height: 200px;
+    }
+
+    .book-item {
+      max-width: 140px;
+    }
+  </style>
+ </head>
+<body class="bg-[#b07f00] text-white min-h-screen">
+  <!-- Header -->
+      <header class="border-b border-gray-200">
+        <div class="container mx-auto px-4 py-3 flex items-center justify-between">
+          <div class="flex items-center space-x-8">
+            <a href="./homerework.html" class="flex items-center text-orange-500 font-bold text-xl">
+              <i data-lucide="book-open" class="mr-2"></i>
+              <span>DS Book</span>
+            </a>
+            
+            <nav class="hidden md:flex items-center space-x-8">
+              <a href="./toko.html" class="text-gray-800 hover:text-orange-500 transition-colors">Shop</a>
+              <a href="./books.html" class="text-gray-800 hover:text-orange-500 transition-colors">Books</a>
+            </nav>
+          </div>
+          
+          <div class="flex items-center space-x-4">
+            <div class="border border-gray-300 rounded px-2 py-1">
+              <span class="text-sm font-medium">EN</span>
+            </div>
+            <a href="./profile.html" class="w-9 h-9 flex items-center justify-center bg-gray-100 rounded-full hover:bg-gray-200 transition-colors">
+              <i data-lucide="user" class="w-5 h-5"></i>
+            </a>
+          </div>
+        </div>
+      </header>
+
+  <!-- Main content -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+
+    <!-- Search Box -->
+    <div class="flex justify-center mt-8">
+      <input id="searchInput" type="text" placeholder="Search books..." class="w-full max-w-md px-4 py-2 rounded-md text-black text-sm focus:outline-none focus:ring focus:border-blue-300" />
+    </div>
+
+    <!-- Section Template -->
+    <template id="section-template">
+      <section class="mt-14">
+        <h2 class="font-semibold text-lg mb-4 text-center md:text-left"></h2>
+        <div class="flex items-center justify-center space-x-6 md:space-x-12 overflow-x-auto py-4">
+          <button aria-label="Previous" class="text-white text-3xl font-light select-none hover:scale-105 transition">&lt;</button>
+          <ul class="flex space-x-6 md:space-x-12 text-center text-sm">
+            <!-- Items inserted here -->
+          </ul>
+          <button aria-label="Next" class="text-white text-3xl font-light select-none hover:scale-105 transition">&gt;</button>
+        </div>
+      </section>
+    </template>
+
+    <!-- Recommended Section -->
+    <section class="mt-14">
+     <a class="font-bold hover:text-white" href="#">
+      Reccomended
+     </a>
+      <div class="flex items-center justify-center space-x-6 md:space-x-12 overflow-x-auto py-4">
+        <ul class="flex space-x-6 md:space-x-12 text-center text-sm">
+          <li class="book-item flex flex-col items-center hover:scale-105 transition">
+            <img src="https://storage.googleapis.com/a1aa/image/dc0dacd2-78ab-4557-a15a-4cdad40acb25.jpg" alt="" class="rounded-md" width="110" height="160" />
+            <span class="mt-2">HARRY POTTER</span>
+          </li>
+          <li class="book-item flex flex-col items-center hover:scale-105 transition">
+            <img src="https://storage.googleapis.com/a1aa/image/57bd96c3-6d5b-4c3c-70fc-e4570298a789.jpg" alt="" class="rounded-md" width="110" height="160" />
+            <span class="mt-2">WHERE THE CRAWDADS SING</span>
+          </li>
+          <li class="book-item flex flex-col items-center hover:scale-105 transition">
+            <img src="https://storage.googleapis.com/a1aa/image/674c330e-3ab7-44e8-66c1-232e061953c2.jpg" alt="" class="rounded-md" width="110" height="160" />
+            <span class="mt-2">THE BALLAD OF LAUREL SPRINGS</span>
+          </li>
+          <li class="book-item flex flex-col items-center hover:scale-105 transition">
+            <img src="https://storage.googleapis.com/a1aa/image/dc0dacd2-78ab-4557-a15a-4cdad40acb25.jpg" alt="" class="rounded-md" width="110" height="160" />
+            <span class="mt-2">HARRY POTTER</span>
+          </li>
+          <li class="book-item flex flex-col items-center hover:scale-105 transition">
+            <img src="https://storage.googleapis.com/a1aa/image/57bd96c3-6d5b-4c3c-70fc-e4570298a789.jpg" alt="" class="rounded-md" width="110" height="160" />
+            <span class="mt-2">WHERE THE CRAWDADS SING</span>
+          </li>
+          <li class="book-item flex flex-col items-center hover:scale-105 transition">
+            <img src="https://storage.googleapis.com/a1aa/image/674c330e-3ab7-44e8-66c1-232e061953c2.jpg" alt="" class="rounded-md" width="110" height="160" />
+            <span class="mt-2">THE BALLAD OF LAUREL SPRINGS</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Hot Section -->
+    <section class="mt-14">
+           <a class="font-bold hover:text-white" href="#">
+      HOT
+     </a>
+      <div class="flex items-center justify-center space-x-6 md:space-x-12 overflow-x-auto py-4">
+        <ul class="flex space-x-6 md:space-x-12 text-center text-sm">
+          <li class="book-item flex flex-col items-center hover:scale-105 transition">
+            <img src="https://storage.googleapis.com/a1aa/image/3eb456d3-fde5-4c2d-8fd9-af90041f128d.jpg" alt="" class="rounded-md" width="110" height="160" />
+            <span class="mt-2">Don Quixote</span>
+          </li>
+          <li class="book-item flex flex-col items-center hover:scale-105 transition">
+            <img src="https://storage.googleapis.com/a1aa/image/4286be62-463d-454d-68bf-a830c7f2c75e.jpg" alt="" class="rounded-md" width="110" height="160" />
+            <span class="mt-2">1984</span>
+          </li>
+          <li class="book-item flex flex-col items-center hover:scale-105 transition">
+            <img src="https://storage.googleapis.com/a1aa/image/6f7bb727-5258-44a3-671d-48553db262da.jpg" alt="" class="rounded-md" width="110" height="160" />
+            <span class="mt-2">One Hundred Years of Solitude</span>
+          </li>
+          <li class="book-item flex flex-col items-center hover:scale-105 transition">
+            <img src="https://storage.googleapis.com/a1aa/image/3eb456d3-fde5-4c2d-8fd9-af90041f128d.jpg" alt="" class="rounded-md" width="110" height="160" />
+            <span class="mt-2">Don Quixote</span>
+          </li>
+          <li class="book-item flex flex-col items-center hover:scale-105 transition">
+            <img src="https://storage.googleapis.com/a1aa/image/4286be62-463d-454d-68bf-a830c7f2c75e.jpg" alt="" class="rounded-md" width="110" height="160" />
+            <span class="mt-2">1984</span>
+          </li>
+          <li class="book-item flex flex-col items-center hover:scale-105 transition">
+            <img src="https://storage.googleapis.com/a1aa/image/6f7bb727-5258-44a3-671d-48553db262da.jpg" alt="" class="rounded-md" width="110" height="160" />
+            <span class="mt-2">One Hundred Years of Solitude</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Top Seller -->
+    <section class="mt-14 mb-20">
+    <a class="font-bold hover:text-white" href="#">
+      Top Seller
+     </a>
+      <div class="flex items-center justify-center space-x-6 md:space-x-12 overflow-x-auto py-4">
+        <ul class="flex space-x-6 md:space-x-12 text-center text-sm">
+          <li class="book-item flex flex-col items-center hover:scale-105 transition">
+            <img src="https://storage.googleapis.com/a1aa/image/2c704f96-9655-413c-40b3-833197a019a4.jpg" alt="" class="rounded-md" width="110" height="160" />
+            <span class="mt-2">Wuthering Heights</span>
+          </li>
+          <li class="book-item flex flex-col items-center hover:scale-105 transition">
+            <img src="https://storage.googleapis.com/a1aa/image/37cebc4c-3a22-41fe-3045-05a9b610f081.jpg" alt="" class="rounded-md" width="110" height="160" />
+            <span class="mt-2">Frankenstein</span>
+          </li>
+          <li class="book-item flex flex-col items-center hover:scale-105 transition">
+            <img src="https://storage.googleapis.com/a1aa/image/63e91d4f-e997-46f4-00bd-5e41ed5ab871.jpg" alt="" class="rounded-md" width="110" height="160" />
+            <span class="mt-2">Great Expectations</span>
+          </li>
+          <li class="book-item flex flex-col items-center hover:scale-105 transition">
+            <img src="https://storage.googleapis.com/a1aa/image/2c704f96-9655-413c-40b3-833197a019a4.jpg" alt="" class="rounded-md" width="110" height="160" />
+            <span class="mt-2">Wuthering Heights</span>
+          </li>
+          <li class="book-item flex flex-col items-center hover:scale-105 transition">
+            <img src="https://storage.googleapis.com/a1aa/image/37cebc4c-3a22-41fe-3045-05a9b610f081.jpg" alt="" class="rounded-md" width="110" height="160" />
+            <span class="mt-2">Frankenstein</span>
+          </li>
+          <li class="book-item flex flex-col items-center hover:scale-105 transition">
+            <img src="https://storage.googleapis.com/a1aa/image/63e91d4f-e997-46f4-00bd-5e41ed5ab871.jpg" alt="" class="rounded-md" width="110" height="160" />
+            <span class="mt-2">Great Expectations</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer (unchanged) -->
+      <footer class="bg-navy-900 text-white">
+        <div class="container mx-auto px-4 py-12">
+          <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div>
+              <h3 class="font-bold text-lg mb-4">Product</h3>
+              <ul class="space-y-2">
+                <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Popular Books</a></li>
+                <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Latest Books</a></li>
+                <li><a href="#" class="text-gray-300 hover:text-white transition-colors">BB Shop</a></li>
+                <li><a href="#" class="text-gray-300 hover:text-white transition-colors">BB Drive</a></li>
+                <li><a href="#" class="text-gray-300 hover:text-white transition-colors">BB Partner</a></li>
+                <li><a href="#" class="text-gray-300 hover:text-white transition-colors">BB Intern</a></li>
+              </ul>
+            </div>
+            
+            <div>
+              <h3 class="font-bold text-lg mb-4">Information</h3>
+              <ul class="space-y-2">
+                <li><a href="#" class="text-gray-300 hover:text-white transition-colors">FAQ</a></li>
+                <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Blog</a></li>
+                <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Help</a></li>
+              </ul>
+            </div>
+            
+            <div>
+              <h3 class="font-bold text-lg mb-4">Company</h3>
+              <ul class="space-y-2">
+                <li><a href="#" class="text-gray-300 hover:text-white transition-colors">About Us</a></li>
+                <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Career</a></li>
+                <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Contact Us</a></li>
+              </ul>
+            </div>
+            
+            <!-- Subscribe -->
+            <div class="bg-navy-800 p-6 rounded">
+              <!-- Title -->
+              <h3 class="font-bold text-lg mb-4">Subscribe</h3>
+
+
+              <div class="flex mb-4">
+
+                <!-- Email input -->
+                <input 
+                  id="subscribe-email"
+                  type="email" 
+                  placeholder="Email Address" 
+                  class="flex-grow px-3 py-2 rounded-l text-gray-800 focus:outline-none"
+                />
+
+                <!-- Icon send button -->
+                <button 
+                id="subscribe-button"
+                class="bg-orange-500 hover:bg-orange-600 text-white px-3 py-2 rounded-r transition-colors">
+                  <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                </button>
+              </div>
+
+              <!-- Text under subscribe input -->
+              <p class="text-sm text-gray-400">
+                Hi, we are from DS Book. Our goal is to provide the best experience in enjoying and purchasing books.
+              </p>
+            </div>
+            
+          </div>
+          
+          <div class="mt-12 pt-8 border-t border-navy-700 flex flex-col md:flex-row justify-between items-center">
+            <div class="flex items-center text-orange-500 font-bold text-xl mb-4 md:mb-0">
+              <i data-lucide="book-open" class="mr-2"></i>
+              <span>DS Book</span>
+            </div>
+            
+            <div class="flex flex-wrap justify-center space-x-6 mb-4 md:mb-0">
+              <a href="#" class="text-sm text-gray-300 hover:text-white transition-colors">Terms & Conditions</a>
+              <a href="#" class="text-sm text-gray-300 hover:text-white transition-colors">Privacy Policy</a>
+              <a href="#" class="text-sm text-gray-300 hover:text-white transition-colors">Cookies</a>
+            </div>
+            
+            <div class="flex space-x-4">
+              <a href="#" class="text-gray-300 hover:text-white transition-colors">
+                <i data-lucide="facebook" class="w-5 h-5"></i>
+              </a>
+              <a href="#" class="text-gray-300 hover:text-white transition-colors">
+                <i data-lucide="mail" class="w-5 h-5"></i>
+              </a>
+              <a href="#" class="text-gray-300 hover:text-white transition-colors">
+                <i data-lucide="twitter" class="w-5 h-5"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </footer>
+        <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+      lucide.createIcons();
+    </script>
+
+  <!-- <script>
+    const searchInput = document.getElementById('searchInput');
+    const bookItems = document.querySelectorAll('.book-item');
+
+    searchInput.addEventListener('input', () => {
+      const filter = searchInput.value.toLowerCase();
+      bookItems.forEach(item => {
+        const text = item.textContent.toLowerCase();
+        item.style.display = text.includes(filter) ? 'flex' : 'none';
+      });
+    });
+  </script> -->
+
+  <script type="module">
+      // Subscribe logic
+      document.getElementById("subscribe-button").addEventListener("click", async () => {
+        //ambil id dan nilai trim dari input email
+        const emailInput = document.getElementById("subscribe-email");
+        const email = emailInput.value.trim();
+
+          if (!email) {
+            alert("Please enter a valid email.");
+            return;
+          }
+
+          try {
+            
+            const response = await fetch("http://localhost:3000/users/subscribe", {
+              method: "POST",
+              headers: {
+                "content-type": "application/json"
+              },
+
+              body: JSON.stringify({email}) //use the email input as the body value
+            });
+
+            //result
+            const result = await response.json();
+
+            if (response.ok) {
+              alert("Subscription successful!");
+              emailInput.value = ""; // clear input
+
+            } else {
+              alert("Subscription failed: " + result.error);
+            }
+
+
+
+          } catch (error) {
+            console.error("Error subscribing:", err);
+            alert("An unexpected error occurred.");
+          }
+      });
+    
+    </script>
+</body>
+</html>
