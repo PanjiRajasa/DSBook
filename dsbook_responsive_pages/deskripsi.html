@@ -27,21 +27,22 @@
     </script>
   </head>
   <body>
+    
     <div class="flex flex-col min-h-screen">
+
+
       <!-- Header -->
       <header class="border-b border-gray-200">
         <div class="container mx-auto px-4 py-3 flex items-center justify-between">
           <div class="flex items-center space-x-8">
-            <a href="/" class="flex items-center text-orange-500 font-bold text-xl">
+            <a href="./homerework.html" class="flex items-center text-orange-500 font-bold text-xl">
               <i data-lucide="book-open" class="mr-2"></i>
               <span>DS Book</span>
             </a>
             
             <nav class="hidden md:flex items-center space-x-8">
-              <a href="/shop" class="text-gray-800 hover:text-orange-500 transition-colors">Shop</a>
-              <a href="/books" class="text-gray-800 hover:text-orange-500 transition-colors">Books</a>
-              <a href="/dropship" class="text-gray-800 hover:text-orange-500 transition-colors">Dropship</a>
-              <a href="/community" class="text-gray-800 hover:text-orange-500 transition-colors">Community</a>
+              <a href="./toko.html" class="text-gray-800 hover:text-orange-500 transition-colors">Shop</a>
+              <a href="./books.html" class="text-gray-800 hover:text-orange-500 transition-colors">Books</a>
             </nav>
           </div>
           
@@ -49,7 +50,7 @@
             <div class="border border-gray-300 rounded px-2 py-1">
               <span class="text-sm font-medium">EN</span>
             </div>
-            <a href="/profile" class="w-9 h-9 flex items-center justify-center bg-gray-100 rounded-full hover:bg-gray-200 transition-colors">
+            <a href="./profile.html" class="w-9 h-9 flex items-center justify-center bg-gray-100 rounded-full hover:bg-gray-200 transition-colors">
               <i data-lucide="user" class="w-5 h-5"></i>
             </a>
           </div>
@@ -133,11 +134,12 @@
               <h3 class="font-bold text-lg mb-4">Subscribe</h3>
               <div class="flex mb-4">
                 <input 
+                id="subscribe-email"
                   type="email" 
                   placeholder="Email Address" 
                   class="flex-grow px-3 py-2 rounded-l text-gray-800 focus:outline-none"
                 />
-                <button class="bg-orange-500 hover:bg-orange-600 text-white px-3 py-2 rounded-r transition-colors">
+                <button id="subscribe-button" class="bg-orange-500 hover:bg-orange-600 text-white px-3 py-2 rounded-r transition-colors">
                   <i data-lucide="arrow-right" class="w-5 h-5"></i>
                 </button>
               </div>
@@ -177,6 +179,50 @@
 
     <script>
       lucide.createIcons();
+    </script>
+
+    <script type="module">
+      // Subscribe logic
+      document.getElementById("subscribe-button").addEventListener("click", async () => {
+        //ambil id dan nilai trim dari input email
+        const emailInput = document.getElementById("subscribe-email");
+        const email = emailInput.value.trim();
+
+          if (!email) {
+            alert("Please enter a valid email.");
+            return;
+          }
+
+          try {
+            
+            const response = await fetch("http://localhost:3000/users/subscribe", {
+              method: "POST",
+              headers: {
+                "content-type": "application/json"
+              },
+
+              body: JSON.stringify({email}) //use the email input as the body value
+            });
+
+            //result
+            const result = await response.json();
+
+            if (response.ok) {
+              alert("Subscription successful!");
+              emailInput.value = ""; // clear input
+
+            } else {
+              alert("Subscription failed: " + result.error);
+            }
+
+
+
+          } catch (error) {
+            console.error("Error subscribing:", err);
+            alert("An unexpected error occurred.");
+          }
+      });
+    
     </script>
   </body>
 </html>
