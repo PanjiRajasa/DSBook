@@ -518,8 +518,8 @@
 
           loadingMessage.classList.add("hidden");
         } catch (error) {
-          console.error("Gagal mengambil data produk:", error);
-          loadingMessage.textContent = "Gagal memuat data.";
+          console.error("Failed to fetch data:", error);
+          loadingMessage.textContent = "Failed to load data.";
         }
       }
 
@@ -605,7 +605,7 @@
           });
         } catch (err) {
           console.error("Search error:", err);
-          loading.textContent = "Gagal memuat hasil.";
+          loading.textContent = "Failed to reload the result.";
         }
       });
     </script>

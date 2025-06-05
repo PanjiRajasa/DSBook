@@ -416,7 +416,7 @@
           container.innerHTML = "";
 
           if (data.length === 0) {
-            container.innerHTML = `<h1 class="text-white text-3xl font-bold text-center">Keranjang kamu kosong.</h1>`;
+            container.innerHTML = `<h1 class="text-white text-3xl font-bold text-center">Your cart is empty.</h1>`;
             totalEl.textContent = `Total: Rp0`;
             return;
           }
@@ -444,7 +444,7 @@
           console.error("Error fetching cart:", err);
           document.getElementById(
             "cart-items"
-          ).innerHTML = `<h1 class="text-white text-3xl font-bold text-center">Gagal memuat cart.</h1>`;
+          ).innerHTML = `<h1 class="text-white text-3xl font-bold text-center">Failed to load cart.</h1>`;
         });
     </script>
 
@@ -478,7 +478,7 @@
               // Bisa redirect ke halaman lain, misal:
               window.location.href = "./purchase.html";
             } else {
-              alert("Order gagal: " + result.error);
+              alert("Order Failed : " + result.error);
             }
           } catch (err) {
             console.error("Error saat checkout:", err);

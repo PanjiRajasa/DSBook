@@ -391,7 +391,7 @@
           const response = await fetch(
             `http://localhost:3000/orders/history/${uid}`
           );
-          if (!response.ok) throw new Error("Gagal mengambil data order");
+          if (!response.ok) throw new Error("Failed to fetch data order");
 
           const data = await response.json();
           const orders = data.orders;

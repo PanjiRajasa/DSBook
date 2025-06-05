@@ -461,8 +461,8 @@
             window.productId = product.id || productId;
           })
           .catch((err) => {
-            console.error("Gagal mengambil data:", err);
-            alert("Gagal memuat detail produk.");
+            console.error("Failed to fetch data:", err);
+            alert("Failed to load the products detail.");
           });
       }
 
@@ -489,7 +489,7 @@
               window.location.href = "cart.html";
             } else {
               const data = await response.json();
-              alert("Gagal menambahkan ke keranjang: " + data.error);
+              alert("Failed to add to the cart: " + data.error);
             }
           } catch (error) {
             console.error(error);
