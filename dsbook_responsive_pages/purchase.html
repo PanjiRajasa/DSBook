@@ -5,156 +5,140 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Purchase History - DS Book</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-          <script>
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+    <script>
       tailwind.config = {
         theme: {
           extend: {
             colors: {
               orange: {
-                500: '#FF5722',
-                600: '#E64A19',
+                500: "#FF5722",
+                600: "#E64A19",
               },
               navy: {
-                700: '#1C2B41',
-                800: '#142236',
-                900: '#0A1629',
-              }
+                700: "#1C2B41",
+                800: "#142236",
+                900: "#0A1629",
+              },
             },
           },
         },
-      }
+      };
     </script>
-
   </head>
   <body class="bg-[#b07f0a] font-sans">
-
     <!-- Header -->
-      <header class="border-b border-gray-200">
-        <div class="container mx-auto px-4 py-3 flex items-center justify-between">
-          <div class="flex items-center space-x-8">
-            <a href="./homerework.html" class="flex items-center text-orange-500 font-bold text-xl">
-              <i data-lucide="book-open" class="mr-2"></i>
-              <span>DS Book</span>
-            </a>
-            
-            <nav class="hidden md:flex items-center space-x-8">
-              <a href="./toko.html" class="text-gray-800 hover:text-orange-500 transition-colors">Shop</a>
-              <a href="./books.html" class="text-gray-800 hover:text-orange-500 transition-colors">Books</a>
-            </nav>
-          </div>
-          
-          <div class="flex items-center space-x-4">
-            <div class="border border-gray-300 rounded px-2 py-1">
-              <span class="text-sm font-medium">EN</span>
-            </div>
-            <a href="./profile.html" class="w-9 h-9 flex items-center justify-center bg-gray-100 rounded-full hover:bg-gray-200 transition-colors">
-              <i data-lucide="user" class="w-5 h-5"></i>
-            </a>
-          </div>
+    <header class="bg-white border-b border-gray-200">
+      <div
+        class="container mx-auto px-4 py-3 flex items-center justify-between"
+      >
+        <div class="flex items-center space-x-8">
+          <a
+            href="./homerework.html"
+            class="flex items-center text-orange-500 font-bold text-xl"
+          >
+            <i data-lucide="book-open" class="mr-2"></i>
+            <span>DS Book</span>
+          </a>
+
+          <nav class="hidden md:flex items-center space-x-8">
+            <a
+              href="./toko.html"
+              class="text-gray-800 hover:text-orange-500 transition-colors"
+              >Shop</a
+            >
+            <a
+              href="./books.html"
+              class="text-gray-800 hover:text-orange-500 transition-colors"
+              >Books</a
+            >
+
+            <a
+              href="./purchase.html"
+              class="text-gray-800 hover:text-orange-500 transition-colors"
+              >Order History</a
+            >
+
+            <a
+              href="./cart.html"
+              class="text-gray-800 hover:text-orange-500 transition-colors"
+              >Cart</a
+            >
+          </nav>
         </div>
-      </header>
+
+        <div class="flex items-center space-x-4">
+          <div class="border border-gray-300 rounded px-2 py-1">
+            <span class="text-sm font-medium">EN</span>
+          </div>
+
+          <a
+            href="./profile.html"
+            class="w-9 h-9 flex items-center justify-center bg-gray-100 rounded-full hover:bg-gray-200 transition-colors"
+          >
+            <img
+              id="profile-picture"
+              class="w-8 h-8 rounded-full object-cover"
+              alt="Profile"
+            />
+          </a>
+        </div>
+      </div>
+    </header>
 
     <!-- Main Content -->
     <main class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-6">
-      <h1 class="text-white text-xl font-bold mb-4">Riwayat Pembelian Anda</h1>
+      <h1 class="text-white text-3xl font-bold text-center">Your Order History</h1>
 
-      <!-- Item 1 -->
-      <section class="flex flex-col sm:flex-row sm:space-x-6 space-y-4 sm:space-y-0">
-        <div class="flex-shrink-0 rounded-lg bg-[#c19e44] p-1" style="max-width: 240px;">
-          <img src="https://via.placeholder.com/240x140?text=Dunia+Sophie" alt="Dunia Sophie" class="rounded-lg w-full h-full object-cover" />
-        </div>
-        <div class="flex-1 rounded-lg bg-[#c19e44] p-6 text-white font-semibold text-base leading-tight">
-          <h2 class="text-lg font-bold mb-2">Judul Buku: Dunia Sophie</h2>
-          <p class="mb-1">Tanggal Pembelian: 12 Mei 2025</p>
-          <p class="mb-1">Status: <span class="text-green-300">Terkirim</span></p>
-          <p class="mb-4">Total Harga: <span class="text-yellow-200 font-bold">Rp120.000</span></p>
-          <a href="#" class="text-pink-400 font-semibold text-sm flex items-center space-x-1">
-            <span>Lihat Detail</span>
-            <i class="fas fa-arrow-right text-xs"></i>
-          </a>
-        </div>
-      </section>
-
-      <!-- Item 2 -->
-      <section class="flex flex-col sm:flex-row sm:space-x-6 space-y-4 sm:space-y-0">
-        <div class="flex-shrink-0 rounded-lg bg-[#c19e44] p-1" style="max-width: 240px;">
-          <img src="https://via.placeholder.com/240x140?text=Laskar+Pelangi" alt="Laskar Pelangi" class="rounded-lg w-full h-full object-cover" />
-        </div>
-        <div class="flex-1 rounded-lg bg-[#c19e44] p-6 text-white font-semibold text-base leading-tight">
-          <h2 class="text-lg font-bold mb-2">Judul Buku: Laskar Pelangi</h2>
-          <p class="mb-1">Tanggal Pembelian: 9 Mei 2025</p>
-          <p class="mb-1">Status: <span class="text-yellow-200">Sedang Dikirim</span></p>
-          <p class="mb-4">Total Harga: <span class="text-yellow-200 font-bold">Rp95.000</span></p>
-          <a href="#" class="text-pink-400 font-semibold text-sm flex items-center space-x-1">
-            <span>Lihat Detail</span>
-            <i class="fas fa-arrow-right text-xs"></i>
-          </a>
-        </div>
-      </section>
-
-      <!-- Item 3 -->
-      <section class="flex flex-col sm:flex-row sm:space-x-6 space-y-4 sm:space-y-0">
-        <div class="flex-shrink-0 rounded-lg bg-[#c19e44] p-1" style="max-width: 240px;">
-          <img src="https://via.placeholder.com/240x140?text=Atomic+Habits" alt="Atomic Habits" class="rounded-lg w-full h-full object-cover" />
-        </div>
-        <div class="flex-1 rounded-lg bg-[#c19e44] p-6 text-white font-semibold text-base leading-tight">
-          <h2 class="text-lg font-bold mb-2">Judul Buku: Atomic Habits</h2>
-          <p class="mb-1">Tanggal Pembelian: 3 Mei 2025</p>
-          <p class="mb-1">Status: <span class="text-red-300">Dibatalkan</span></p>
-          <p class="mb-4">Total Harga: <span class="text-yellow-200 font-bold">Rp130.000</span></p>
-          <a href="#" class="text-pink-400 font-semibold text-sm flex items-center space-x-1">
-            <span>Lihat Detail</span>
-            <i class="fas fa-arrow-right text-xs"></i>
-          </a>
-        </div>
-      </section>
     </main>
 
     <!-- Footer -->
-      <footer class="bg-navy-900 text-white">
-        <div class="container mx-auto px-4 py-12">
-          <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-            <div>
-              <h3 class="font-bold text-lg mb-4">Product</h3>
-              <ul class="space-y-2">
-                <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Popular Books</a></li>
-                <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Latest Books</a></li>
-                <li><a href="#" class="text-gray-300 hover:text-white transition-colors">BB Shop</a></li>
-                <li><a href="#" class="text-gray-300 hover:text-white transition-colors">BB Drive</a></li>
-                <li><a href="#" class="text-gray-300 hover:text-white transition-colors">BB Partner</a></li>
-                <li><a href="#" class="text-gray-300 hover:text-white transition-colors">BB Intern</a></li>
-              </ul>
-            </div>
-            
-            <div>
-              <h3 class="font-bold text-lg mb-4">Information</h3>
-              <ul class="space-y-2">
-                <li><a href="#" class="text-gray-300 hover:text-white transition-colors">FAQ</a></li>
-                <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Blog</a></li>
-                <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Help</a></li>
-              </ul>
-            </div>
-            
-            <div>
-              <h3 class="font-bold text-lg mb-4">Company</h3>
-              <ul class="space-y-2">
-                <li><a href="#" class="text-gray-300 hover:text-white transition-colors">About Us</a></li>
-                <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Career</a></li>
-                <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Contact Us</a></li>
-              </ul>
-            </div>
-            
+<footer class="bg-navy-900 text-white">
+  <div class="container mx-auto px-4 py-12">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+      <div>
+        <h3 class="font-bold text-lg mb-4">Product</h3>
+        <ul class="space-y-2">
+          <li><a href="./books.html" class="text-gray-300 hover:text-white transition-colors">Popular Books</a></li>
+          <li><a href="./homerework.html" class="text-gray-300 hover:text-white transition-colors">Latest Books</a></li>
+          <li><a href="./toko.html" class="text-gray-300 hover:text-white transition-colors">BB Shop</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="font-bold text-lg mb-4">Information</h3>
+        <ul class="space-y-2">
+          <li><a href="javascript:void(0)" onclick="openModal('helpModal')" class="text-gray-300 hover:text-white transition-colors">Help</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="font-bold text-lg mb-4">Company</h3>
+        <ul class="space-y-2">
+          <li><a href="javascript:void(0)" onclick="openModal('aboutModal')" class="text-gray-300 hover:text-white transition-colors">About Us</a></li>
+          <li><a href="javascript:void(0)" onclick="openModal('contactModal')" class="text-gray-300 hover:text-white transition-colors">Contact Us</a></li>
+        </ul>
+      </div>
             <div class="bg-navy-800 p-6 rounded">
+              <!-- Title -->
               <h3 class="font-bold text-lg mb-4">Subscribe</h3>
+
+
               <div class="flex mb-4">
+
+                <!-- Email input -->
                 <input 
                   id="subscribe-email"
                   type="email" 
                   placeholder="Email Address" 
                   class="flex-grow px-3 py-2 rounded-l text-gray-800 focus:outline-none"
                 />
-                <button id="subscribe-button" class="bg-orange-500 hover:bg-orange-600 text-white px-3 py-2 rounded-r transition-colors">
+
+                <!-- Icon send button -->
+                <button 
+                id="subscribe-button"
+                class="bg-orange-500 hover:bg-orange-600 text-white px-3 py-2 rounded-r transition-colors">
                   <i data-lucide="arrow-right" class="w-5 h-5"></i>
                 </button>
               </div>
@@ -164,45 +148,202 @@
                 Hi, we are from DS Book. Our goal is to provide the best experience in enjoying and purchasing books.
               </p>
             </div>
-          </div>
-          
-          <div class="mt-12 pt-8 border-t border-navy-700 flex flex-col md:flex-row justify-between items-center">
-            <div class="flex items-center text-orange-500 font-bold text-xl mb-4 md:mb-0">
-              <i data-lucide="book-open" class="mr-2"></i>
-              <span>DS Book</span>
-            </div>
-            
-            <div class="flex flex-wrap justify-center space-x-6 mb-4 md:mb-0">
-              <a href="#" class="text-sm text-gray-300 hover:text-white transition-colors">Terms & Conditions</a>
-              <a href="#" class="text-sm text-gray-300 hover:text-white transition-colors">Privacy Policy</a>
-              <a href="#" class="text-sm text-gray-300 hover:text-white transition-colors">Cookies</a>
-            </div>
-            
-            <div class="flex space-x-4">
-              <a href="#" class="text-gray-300 hover:text-white transition-colors">
-                <i data-lucide="facebook" class="w-5 h-5"></i>
-              </a>
-              <a href="#" class="text-gray-300 hover:text-white transition-colors">
-                <i data-lucide="mail" class="w-5 h-5"></i>
-              </a>
-              <a href="#" class="text-gray-300 hover:text-white transition-colors">
-                <i data-lucide="twitter" class="w-5 h-5"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-      </footer>
-        <script src="https://unpkg.com/lucide@latest"></script>
+    </div>
+
+    <div class="mt-12 pt-8 border-t border-navy-700 flex flex-col md:flex-row justify-between items-center">
+      <div class="flex items-center text-orange-500 font-bold text-xl mb-4 md:mb-0">
+        <i data-lucide="book-open" class="mr-2"></i>
+        <span>DS Book</span>
+      </div>
+      <div class="flex flex-wrap justify-center space-x-6 mb-4 md:mb-0">
+        <a href="javascript:void(0)" onclick="openModal('termsModal')" class="text-sm text-gray-300 hover:text-white transition-colors">Terms & Conditions</a>
+        <a href="javascript:void(0)" onclick="openModal('privacyModal')" class="text-sm text-gray-300 hover:text-white transition-colors">Privacy Policy</a>
+        <a href="javascript:void(0)" onclick="openModal('cookiesModal')" class="text-sm text-gray-300 hover:text-white transition-colors">Cookies</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Modals -->
+<!-- Contoh: Modal Terms of Use -->
+<div id="termsModal" class="modal hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+  <div class="modal-content bg-white rounded-lg p-6 max-w-lg mx-4 relative max-h-[80vh] overflow-y-auto">
+    <button onclick="closeModal('termsModal')" class="close-btn absolute top-4 right-4 text-gray-600 hover:text-gray-900 text-xl font-bold">&times;</button>
+    <h2 class="text-xl font-bold mb-4">Terms and Conditions</h2>
+    <p class="text-sm text-gray-700 mb-2">
+      Welcome to DS Book!
+    </p>
+    <p class="text-sm text-gray-700 mb-4">
+      By accessing or using our website and services, you agree to comply with and be bound by the following terms and conditions. Please read them carefully.
+    </p>
+    <ol class="list-decimal list-inside text-sm text-gray-700 space-y-2">
+      <li><strong>Use of Service</strong><br>
+        You agree to use DS Book for lawful purposes only. You must not use our platform to post or transmit any unlawful, harmful, or offensive content.
+      </li>
+      <li><strong>Account Responsibility</strong><br>
+        You are responsible for maintaining the confidentiality of your account information. You agree to notify us immediately of any unauthorized use of your account.
+      </li>
+      <li><strong>Intellectual Property</strong><br>
+        All content, logos, trademarks, and materials on DS Book are owned by or licensed to us. You may not reproduce, distribute, or use any content without our prior written permission.
+      </li>
+      <li><strong>Purchases and Payments</strong><br>
+        All purchases made on DS Book are subject to product availability and confirmation. Prices and payment terms are subject to change without prior notice.
+      </li>
+      <li><strong>Privacy and Data Protection</strong><br>
+        Your personal information is handled according to our Privacy Policy. We take reasonable measures to protect your data but cannot guarantee absolute security.
+      </li>
+      <li><strong>Limitation of Liability</strong><br>
+        DS Book is not liable for any direct, indirect, or consequential damages arising from the use of our services. We do not guarantee uninterrupted or error-free service.
+      </li>
+      <li><strong>Modifications</strong><br>
+        We reserve the right to modify these terms at any time. Continued use of DS Book after changes constitutes your acceptance of the updated terms.
+      </li>
+      <li><strong>Governing Law</strong><br>
+        These terms are governed by the laws of Indonesia. Any disputes will be resolved through the appropriate courts in Indonesia.
+      </li>
+    </ol>
+    <p class="text-sm text-gray-700 mt-4">
+      If you have any questions about these terms, please contact us at <a href="mailto:contact@dsbook.id" class="underline text-orange-600 hover:text-orange-700">contact@dsbook.id</a>.
+    </p>
+  </div>
+</div>
+
+<!-- Modal Privacy -->
+<div id="privacyModal" class="modal hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+  <div class="modal-content bg-white rounded-lg p-6 max-w-lg mx-4 relative max-h-[80vh] overflow-y-auto">
+    <button onclick="closeModal('privacyModal')" class="close-btn absolute top-4 right-4 text-gray-600 hover:text-gray-900 text-xl font-bold">&times;</button>
+    <h2 class="text-xl font-bold mb-4">Privacy Policy</h2>
+    <p class="text-sm text-gray-700 mb-2">
+      At DS Book, your privacy is important to us. This Privacy Policy explains how we collect, use, and protect your personal information when you use our services.
+    </p>
+    <ol class="list-decimal list-inside text-sm text-gray-700 space-y-2">
+      <li><strong>Information We Collect</strong><br>
+        We collect personal information such as your name, email address, and payment details when you register or make a purchase. We also collect usage data and cookies to improve your experience.
+      </li>
+      <li><strong>How We Use Your Information</strong><br>
+        Your information is used to provide and improve our services, process transactions, communicate with you, and personalize content. We do not sell your personal data to third parties.
+      </li>
+      <li><strong>Data Security</strong><br>
+        We implement reasonable security measures to protect your information from unauthorized access, alteration, disclosure, or destruction.
+      </li>
+      <li><strong>Cookies and Tracking</strong><br>
+        We use cookies to enhance site functionality, analyze traffic, and provide personalized content. You can control cookie preferences in your browser settings.
+      </li>
+      <li><strong>Third-Party Services</strong><br>
+        Some services we use may collect information on our behalf. We require these third parties to comply with privacy standards consistent with this policy.
+      </li>
+      <li><strong>Your Rights</strong><br>
+        You have the right to access, correct, or delete your personal data. You may also opt out of marketing communications by following the unsubscribe instructions provided.
+      </li>
+      <li><strong>Changes to This Policy</strong><br>
+        We may update this Privacy Policy periodically. Continued use of our services after changes means you accept the revised policy.
+      </li>
+      <li><strong>Contact Us</strong><br>
+        For any questions about this Privacy Policy or your data, please contact us at <a href="mailto:contact@dsbook.id" class="underline text-orange-600 hover:text-orange-700">contact@dsbook.id</a>.
+      </li>
+    </ol>
+  </div>
+</div>
+
+
+<!-- Help Modal -->
+<div id="helpModal" class="modal hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+  <div class="modal-content bg-white rounded-lg p-6 max-w-lg mx-4 relative max-h-[80vh] overflow-y-auto">
+    <button onclick="closeModal('helpModal')" class="close-btn absolute top-4 right-4 text-gray-600 hover:text-gray-900 text-xl font-bold">&times;</button>
+    <h2 class="text-xl font-bold mb-4">Help</h2>
+    <p class="text-sm text-gray-700 mb-2">
+      Need assistance with DS Book? We're here to help!
+    </p>
+    <p class="text-sm text-gray-700 mb-4">
+      You can contact our customer support team for any questions or issues related to your account, orders, or our services.
+    </p>
+    <p class="text-sm text-gray-700">
+      Email: <a href="mailto:support@dsbook.id" class="underline text-orange-600 hover:text-orange-700">support@dsbook.id</a><br/>
+      Phone: +62 123-4567-8901<br/>
+      Support Hours: Monday to Friday, 9 AM - 5 PM (WIB)
+    </p>
+  </div>
+</div>
+
+<!-- About Us Modal -->
+<div id="aboutModal" class="modal hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+  <div class="modal-content bg-white rounded-lg p-6 max-w-lg mx-4 relative max-h-[80vh] overflow-y-auto">
+    <button onclick="closeModal('aboutModal')" class="close-btn absolute top-4 right-4 text-gray-600 hover:text-gray-900 text-xl font-bold">&times;</button>
+    <h2 class="text-xl font-bold mb-4">About Us</h2>
+    <p class="text-sm text-gray-700 mb-2">
+      DS Book is an Indonesian platform dedicated to book lovers.
+    </p>
+    <p class="text-sm text-gray-700 mb-2">
+      Our mission is to provide an excellent experience in reading, buying, and sharing books, connecting readers with the best titles available locally and globally.
+    </p>
+    <p class="text-sm text-gray-700">
+      We believe in the power of knowledge and community, supporting education and culture through easy access to quality literature.
+    </p>
+  </div>
+</div>
+
+<!-- Contact Us Modal -->
+<div id="contactModal" class="modal hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+  <div class="modal-content bg-white rounded-lg p-6 max-w-lg mx-4 relative max-h-[80vh] overflow-y-auto">
+    <button onclick="closeModal('contactModal')" class="close-btn absolute top-4 right-4 text-gray-600 hover:text-gray-900 text-xl font-bold">&times;</button>
+    <h2 class="text-xl font-bold mb-4">Contact Us</h2>
+    <p class="text-sm text-gray-700 mb-2">
+      Have questions, suggestions, or feedback? We'd love to hear from you.
+    </p>
+    <p class="text-sm text-gray-700 mb-2">
+      You can reach our team via:
+    </p>
+    <ul class="list-disc list-inside text-sm text-gray-700 space-y-1">
+      <li>Email: <a href="mailto:contact@dsbook.id" class="underline text-orange-600 hover:text-orange-700">contact@dsbook.id</a></li>
+      <li>Phone: +62 123-4567-8901</li>
+      <li>Office Hours: Monday to Friday, 9 AM - 6 PM (WIB)</li>
+    </ul>
+  </div>
+</div>
+
+<!-- Cookies Policy Modal -->
+<div id="cookiesModal" class="modal hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+  <div class="modal-content bg-white rounded-lg p-6 max-w-lg mx-4 relative max-h-[80vh] overflow-y-auto">
+    <button onclick="closeModal('cookiesModal')" class="close-btn absolute top-4 right-4 text-gray-600 hover:text-gray-900 text-xl font-bold">&times;</button>
+    <h2 class="text-xl font-bold mb-4">Cookies Policy</h2>
+    <p class="text-sm text-gray-700 mb-2">
+      We use cookies to enhance your browsing experience on DS Book.
+    </p>
+    <ol class="list-decimal list-inside text-sm text-gray-700 space-y-2">
+      <li><strong>What Are Cookies?</strong><br/>
+      Cookies are small data files stored on your device that help us remember your preferences and improve site functionality.</li>
+      <li><strong>How We Use Cookies</strong><br/>
+      We use cookies to personalize content, analyze site traffic, and provide social media features.</li>
+      <li><strong>Managing Cookies</strong><br/>
+      You can set your browser to refuse cookies or alert you when cookies are being sent. However, some parts of our site may not function properly without cookies.</li>
+      <li><strong>Third-Party Cookies</strong><br/>
+      We may allow third-party services like analytics and advertising partners to place cookies on your device. These are governed by their respective privacy policies.</li>
+      <li><strong>Consent</strong><br/>
+      By continuing to use DS Book, you consent to our use of cookies as described in this policy.</li>
+    </ol>
+  </div>
+</div>    <script src="https://unpkg.com/lucide@latest"></script>
+
     <script>
       lucide.createIcons();
-    </script>
 
+        function openModal(id) {
+    document.getElementById(id).classList.remove('hidden');
+    document.getElementById(id).classList.add('flex');
+  }
+  function closeModal(id) {
+    document.getElementById(id).classList.remove('flex');
+    document.getElementById(id).classList.add('hidden');
+  }
+    </script>
     <script type="module">
       // Subscribe logic
-      document.getElementById("subscribe-button").addEventListener("click", async () => {
-        //ambil id dan nilai trim dari input email
-        const emailInput = document.getElementById("subscribe-email");
-        const email = emailInput.value.trim();
+      document
+        .getElementById("subscribe-button")
+        .addEventListener("click", async () => {
+          //ambil id dan nilai trim dari input email
+          const emailInput = document.getElementById("subscribe-email");
+          const email = emailInput.value.trim();
 
           if (!email) {
             alert("Please enter a valid email.");
@@ -210,15 +351,17 @@
           }
 
           try {
-            
-            const response = await fetch("http://localhost:3000/users/subscribe", {
-              method: "POST",
-              headers: {
-                "content-type": "application/json"
-              },
+            const response = await fetch(
+              "http://localhost:3000/users/subscribe",
+              {
+                method: "POST",
+                headers: {
+                  "content-type": "application/json",
+                },
 
-              body: JSON.stringify({email}) //use the email input as the body value
-            });
+                body: JSON.stringify({ email }), //use the email input as the body value
+              }
+            );
 
             //result
             const result = await response.json();
@@ -226,19 +369,104 @@
             if (response.ok) {
               alert("Subscription successful!");
               emailInput.value = ""; // clear input
-
             } else {
               alert("Subscription failed: " + result.error);
             }
-
-
-
           } catch (error) {
             console.error("Error subscribing:", err);
             alert("An unexpected error occurred.");
           }
-      });
-    
+        });
+    </script>
+
+    <script>
+      async function fetchOrders() {
+        const uid = localStorage.getItem("uid");
+
+        if (!uid) {
+          alert("User belum login, silakan login dulu.");
+        }
+
+        try {
+          const response = await fetch(
+            `http://localhost:3000/orders/history/${uid}`
+          );
+          if (!response.ok) throw new Error("Gagal mengambil data order");
+
+          const data = await response.json();
+          const orders = data.orders;
+
+          if (!orders || orders.length === 0) {
+            document.querySelector(
+              "main"
+            ).innerHTML = `<h1 class="text-white text-3xl font-bold text-center">Tidak ada riwayat pembelian.</h1>
+              <img src="https://i.imghippo.com/files/hzH1306RZg.jpg" class="rounded-xl mx-auto block
+"/>`;
+            return;
+          }
+
+          // Buat HTML untuk semua order
+          const ordersHTML = orders
+            .map((order) => {
+              const date = new Date(order.date).toLocaleDateString("EN", {
+                year: "numeric",
+                month: "long",
+                day: "numeric",
+              });
+
+              // Warna status
+              let statusClass = "text-red-300";
+              if (order.status === "pending") statusClass = "text-yellow-200";
+              else if (order.status === "terkirim")
+                statusClass = "text-green-300";
+
+              return `
+      <section class="flex flex-col sm:flex-row sm:space-x-6 space-y-4 sm:space-y-0 mb-6">
+        
+        <div class="flex-1 rounded-lg bg-[#c19e44] p-6 text-white font-semibold text-base leading-tight">
+          <h2 class="text-lg font-bold mb-2">${order.title}</h2>
+          <p class="mb-1">Order Date: ${date}</p>
+          <p class="mb-1">Status: <span class="${statusClass}">${
+                order.status
+              }</span></p>
+          <p class="mb-4">Total Price: <span class="text-yellow-200 font-bold">Rp${order.totalAmount.toLocaleString(
+            "id-ID"
+          )}</span></p>
+         
+        </div>
+      </section>`;
+            })
+            .join("");
+
+          // Tampilkan semua orders di main
+          document.querySelector(
+            "main"
+          ).innerHTML = `<h1 class="text-white text-3xl font-bold text-center">Your Order History</h1>${ordersHTML}`;
+        } catch (error) {
+          console.error(error);
+          alert("Terjadi kesalahan saat memuat riwayat pembelian.");
+        }
+      }
+
+      fetchOrders();
+    </script>
+    <script>
+      const uid = localStorage.getItem("uid");
+
+      if (uid) {
+        fetch(`http://localhost:3000/users/${uid}`)
+          .then((res) => res.json())
+          .then((userData) => {
+            if (userData.image) {
+              const profileImg = document.getElementById("profile-picture");
+              profileImg.src =
+                userData.image || "https://i.imghippo.com/files/mxS4831hCg.png";
+            }
+          })
+          .catch((err) => {
+            console.error("Failed to load user data:", err);
+          });
+      }
     </script>
   </body>
 </html>

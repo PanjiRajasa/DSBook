@@ -1,236 +1,203 @@
 <html lang="en">
- <head>
-  <meta charset="utf-8"/>
-  <meta content="width=device-width, initial-scale=1" name="viewport"/>
-  <title>
-   DS Book
-  </title>
-  <script src="https://cdn.tailwindcss.com">
-  </script>
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <title>DS Book</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
     <script src="https://cdn.tailwindcss.com"></script>
-            <script>
+    <script>
       tailwind.config = {
         theme: {
           extend: {
             colors: {
               orange: {
-                500: '#FF5722',
-                600: '#E64A19',
+                500: "#FF5722",
+                600: "#E64A19",
               },
               navy: {
-                700: '#1C2B41',
-                800: '#142236',
-                900: '#0A1629',
-              }
+                700: "#1C2B41",
+                800: "#142236",
+                900: "#0A1629",
+              },
             },
           },
         },
-      }
+      };
     </script>
 
-  <style>
-   body 
-    .book-item img {
-      width: 140px;
-      height: 200px;
-    }
+    <style>
+      body .book-item img {
+        width: 140px;
+        height: 200px;
+      }
 
-    .book-item {
-      max-width: 140px;
-    }
-  </style>
- </head>
-<body class="bg-[#b07f00] text-white min-h-screen">
-  <!-- Header -->
-      <header class="border-b border-gray-200">
-        <div class="container mx-auto px-4 py-3 flex items-center justify-between">
-          <div class="flex items-center space-x-8">
-            <a href="./homerework.html" class="flex items-center text-orange-500 font-bold text-xl">
-              <i data-lucide="book-open" class="mr-2"></i>
-              <span>DS Book</span>
-            </a>
-            
-            <nav class="hidden md:flex items-center space-x-8">
-              <a href="./toko.html" class="text-gray-800 hover:text-orange-500 transition-colors">Shop</a>
-              <a href="./books.html" class="text-gray-800 hover:text-orange-500 transition-colors">Books</a>
-            </nav>
-          </div>
-          
-          <div class="flex items-center space-x-4">
-            <div class="border border-gray-300 rounded px-2 py-1">
-              <span class="text-sm font-medium">EN</span>
-            </div>
-            <a href="./profile.html" class="w-9 h-9 flex items-center justify-center bg-gray-100 rounded-full hover:bg-gray-200 transition-colors">
-              <i data-lucide="user" class="w-5 h-5"></i>
-            </a>
-          </div>
+      .book-item {
+        max-width: 140px;
+      }
+    </style>
+  </head>
+  <body class="bg-[#b07f00] text-white min-h-screen">
+    <!-- Header -->
+    <header class="bg-white border-b border-gray-200">
+      <div
+        class="container mx-auto px-4 py-3 flex items-center justify-between"
+      >
+        <div class="flex items-center space-x-8">
+          <a
+            href="./homerework.html"
+            class="flex items-center text-orange-500 font-bold text-xl"
+          >
+            <i data-lucide="book-open" class="mr-2"></i>
+            <span>DS Book</span>
+          </a>
+
+          <nav class="hidden md:flex items-center space-x-8">
+            <a
+              href="./toko.html"
+              class="text-gray-800 hover:text-orange-500 transition-colors"
+              >Shop</a
+            >
+            <a
+              href="./books.html"
+              class="text-gray-800 hover:text-orange-500 transition-colors"
+              >Books</a
+            >
+
+            <a
+              href="./purchase.html"
+              class="text-gray-800 hover:text-orange-500 transition-colors"
+              >Order History</a
+            >
+
+            <a
+              href="./cart.html"
+              class="text-gray-800 hover:text-orange-500 transition-colors"
+              >Cart</a
+            >
+          </nav>
         </div>
-      </header>
 
-  <!-- Main content -->
-  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div class="flex items-center space-x-4">
+          <div class="border border-gray-300 rounded px-2 py-1">
+            <span class="text-sm font-medium text-black">EN</span>
+          </div>
 
-    <!-- Search Box -->
-    <div class="flex justify-center mt-8">
-      <input id="searchInput" type="text" placeholder="Search books..." class="w-full max-w-md px-4 py-2 rounded-md text-black text-sm focus:outline-none focus:ring focus:border-blue-300" />
-    </div>
+          <a
+            href="./profile.html"
+            class="w-9 h-9 flex items-center justify-center bg-gray-100 rounded-full hover:bg-gray-200 transition-colors"
+          >
+            <img
+              id="profile-picture"
+              class="w-8 h-8 rounded-full object-cover"
+              src="https://via.placeholder.com/40"
+              alt="Profile"
+            />
+          </a>
+        </div>
+      </div>
+    </header>
 
-    <!-- Section Template -->
-    <template id="section-template">
-      <section class="mt-14">
-        <h2 class="font-semibold text-lg mb-4 text-center md:text-left"></h2>
-        <div class="flex items-center justify-center space-x-6 md:space-x-12 overflow-x-auto py-4">
-          <button aria-label="Previous" class="text-white text-3xl font-light select-none hover:scale-105 transition">&lt;</button>
-          <ul class="flex space-x-6 md:space-x-12 text-center text-sm">
+    <!-- Main content -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <!-- Search Box -->
+      <div class="flex justify-center mt-8">
+        <input
+          id="searchInput"
+          type="text"
+          placeholder="Search books..."
+          class="w-full max-w-md px-4 py-4 rounded-md text-black text-md focus:outline-none focus:ring focus:border-blue-300"
+        />
+      </div>
+
+      <!-- untuk search result -->
+      <template id="section-template">
+        <section class="mt-14">
+          <h2 id="se-title" class="font-semibold text-lg mb-4 text-center md:text-left"></h2>
+
+          <!-- Loading & empty messages -->
+          <div
+            id="search-loading"
+            class="text-center text-white text-lg hidden"
+          >
+            Loading...
+          </div>
+          <div id="search-empty" class="text-center text-white text-lg hidden">
+            Tidak ada hasil ditemukan.
+          </div>
+
+          <!-- Result list -->
+          <ul
+            id="ul-search"
+            class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 text-center text-sm"
+          >
             <!-- Items inserted here -->
           </ul>
-          <button aria-label="Next" class="text-white text-3xl font-light select-none hover:scale-105 transition">&gt;</button>
+        </section>
+      </template>
+
+      <div id="search-results-container"></div>
+
+      <!-- Books Section -->
+      <section class="mb-14 py-28">
+        <h1 class="text-4xl text-white font-bold text-center mb-8">Books</h1>
+
+        <div
+          class="flex items-center justify-center space-x-6 md:space-x-12 overflow-x-auto"
+        >
+          <!-- ul untuk data -->
+          <div id="loading-message" class="text-center text-white text-lg">
+            Loading...
+          </div>
+          <div id="empty-message" class="text-center text-white text-lg hidden">
+            Tidak ada data buku tersedia.
+          </div>
+          <ul
+            id="best-seller-list"
+            class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 text-center text-sm"
+          >
+            <li
+              class="book-item flex flex-col items-center hover:scale-105 transition"
+            >
+              <img
+                src="https://storage.googleapis.com/a1aa/image/dc0dacd2-78ab-4557-a15a-4cdad40acb25.jpg"
+                alt=""
+                class="rounded-md"
+                width="110"
+                height="160"
+              />
+              <span class="mt-2">HARRY POTTER</span>
+            </li>
+          </ul>
         </div>
       </section>
-    </template>
+    </main>
 
-    <!-- Recommended Section -->
-    <section class="mt-14">
-     <a class="font-bold hover:text-white" href="#">
-      Reccomended
-     </a>
-      <div class="flex items-center justify-center space-x-6 md:space-x-12 overflow-x-auto py-4">
-        <ul class="flex space-x-6 md:space-x-12 text-center text-sm">
-          <li class="book-item flex flex-col items-center hover:scale-105 transition">
-            <img src="https://storage.googleapis.com/a1aa/image/dc0dacd2-78ab-4557-a15a-4cdad40acb25.jpg" alt="" class="rounded-md" width="110" height="160" />
-            <span class="mt-2">HARRY POTTER</span>
-          </li>
-          <li class="book-item flex flex-col items-center hover:scale-105 transition">
-            <img src="https://storage.googleapis.com/a1aa/image/57bd96c3-6d5b-4c3c-70fc-e4570298a789.jpg" alt="" class="rounded-md" width="110" height="160" />
-            <span class="mt-2">WHERE THE CRAWDADS SING</span>
-          </li>
-          <li class="book-item flex flex-col items-center hover:scale-105 transition">
-            <img src="https://storage.googleapis.com/a1aa/image/674c330e-3ab7-44e8-66c1-232e061953c2.jpg" alt="" class="rounded-md" width="110" height="160" />
-            <span class="mt-2">THE BALLAD OF LAUREL SPRINGS</span>
-          </li>
-          <li class="book-item flex flex-col items-center hover:scale-105 transition">
-            <img src="https://storage.googleapis.com/a1aa/image/dc0dacd2-78ab-4557-a15a-4cdad40acb25.jpg" alt="" class="rounded-md" width="110" height="160" />
-            <span class="mt-2">HARRY POTTER</span>
-          </li>
-          <li class="book-item flex flex-col items-center hover:scale-105 transition">
-            <img src="https://storage.googleapis.com/a1aa/image/57bd96c3-6d5b-4c3c-70fc-e4570298a789.jpg" alt="" class="rounded-md" width="110" height="160" />
-            <span class="mt-2">WHERE THE CRAWDADS SING</span>
-          </li>
-          <li class="book-item flex flex-col items-center hover:scale-105 transition">
-            <img src="https://storage.googleapis.com/a1aa/image/674c330e-3ab7-44e8-66c1-232e061953c2.jpg" alt="" class="rounded-md" width="110" height="160" />
-            <span class="mt-2">THE BALLAD OF LAUREL SPRINGS</span>
-          </li>
+    <!-- Footer (unchanged) -->
+<footer class="bg-navy-900 text-white">
+  <div class="container mx-auto px-4 py-12">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+      <div>
+        <h3 class="font-bold text-lg mb-4">Product</h3>
+        <ul class="space-y-2">
+          <li><a href="./books.html" class="text-gray-300 hover:text-white transition-colors">Popular Books</a></li>
+          <li><a href="./homerework.html" class="text-gray-300 hover:text-white transition-colors">Latest Books</a></li>
+          <li><a href="./toko.html" class="text-gray-300 hover:text-white transition-colors">BB Shop</a></li>
         </ul>
       </div>
-    </section>
-
-    <!-- Hot Section -->
-    <section class="mt-14">
-           <a class="font-bold hover:text-white" href="#">
-      HOT
-     </a>
-      <div class="flex items-center justify-center space-x-6 md:space-x-12 overflow-x-auto py-4">
-        <ul class="flex space-x-6 md:space-x-12 text-center text-sm">
-          <li class="book-item flex flex-col items-center hover:scale-105 transition">
-            <img src="https://storage.googleapis.com/a1aa/image/3eb456d3-fde5-4c2d-8fd9-af90041f128d.jpg" alt="" class="rounded-md" width="110" height="160" />
-            <span class="mt-2">Don Quixote</span>
-          </li>
-          <li class="book-item flex flex-col items-center hover:scale-105 transition">
-            <img src="https://storage.googleapis.com/a1aa/image/4286be62-463d-454d-68bf-a830c7f2c75e.jpg" alt="" class="rounded-md" width="110" height="160" />
-            <span class="mt-2">1984</span>
-          </li>
-          <li class="book-item flex flex-col items-center hover:scale-105 transition">
-            <img src="https://storage.googleapis.com/a1aa/image/6f7bb727-5258-44a3-671d-48553db262da.jpg" alt="" class="rounded-md" width="110" height="160" />
-            <span class="mt-2">One Hundred Years of Solitude</span>
-          </li>
-          <li class="book-item flex flex-col items-center hover:scale-105 transition">
-            <img src="https://storage.googleapis.com/a1aa/image/3eb456d3-fde5-4c2d-8fd9-af90041f128d.jpg" alt="" class="rounded-md" width="110" height="160" />
-            <span class="mt-2">Don Quixote</span>
-          </li>
-          <li class="book-item flex flex-col items-center hover:scale-105 transition">
-            <img src="https://storage.googleapis.com/a1aa/image/4286be62-463d-454d-68bf-a830c7f2c75e.jpg" alt="" class="rounded-md" width="110" height="160" />
-            <span class="mt-2">1984</span>
-          </li>
-          <li class="book-item flex flex-col items-center hover:scale-105 transition">
-            <img src="https://storage.googleapis.com/a1aa/image/6f7bb727-5258-44a3-671d-48553db262da.jpg" alt="" class="rounded-md" width="110" height="160" />
-            <span class="mt-2">One Hundred Years of Solitude</span>
-          </li>
+      <div>
+        <h3 class="font-bold text-lg mb-4">Information</h3>
+        <ul class="space-y-2">
+          <li><a href="javascript:void(0)" onclick="openModal('helpModal')" class="text-gray-300 hover:text-white transition-colors">Help</a></li>
         </ul>
       </div>
-    </section>
-
-    <!-- Top Seller -->
-    <section class="mt-14 mb-20">
-    <a class="font-bold hover:text-white" href="#">
-      Top Seller
-     </a>
-      <div class="flex items-center justify-center space-x-6 md:space-x-12 overflow-x-auto py-4">
-        <ul class="flex space-x-6 md:space-x-12 text-center text-sm">
-          <li class="book-item flex flex-col items-center hover:scale-105 transition">
-            <img src="https://storage.googleapis.com/a1aa/image/2c704f96-9655-413c-40b3-833197a019a4.jpg" alt="" class="rounded-md" width="110" height="160" />
-            <span class="mt-2">Wuthering Heights</span>
-          </li>
-          <li class="book-item flex flex-col items-center hover:scale-105 transition">
-            <img src="https://storage.googleapis.com/a1aa/image/37cebc4c-3a22-41fe-3045-05a9b610f081.jpg" alt="" class="rounded-md" width="110" height="160" />
-            <span class="mt-2">Frankenstein</span>
-          </li>
-          <li class="book-item flex flex-col items-center hover:scale-105 transition">
-            <img src="https://storage.googleapis.com/a1aa/image/63e91d4f-e997-46f4-00bd-5e41ed5ab871.jpg" alt="" class="rounded-md" width="110" height="160" />
-            <span class="mt-2">Great Expectations</span>
-          </li>
-          <li class="book-item flex flex-col items-center hover:scale-105 transition">
-            <img src="https://storage.googleapis.com/a1aa/image/2c704f96-9655-413c-40b3-833197a019a4.jpg" alt="" class="rounded-md" width="110" height="160" />
-            <span class="mt-2">Wuthering Heights</span>
-          </li>
-          <li class="book-item flex flex-col items-center hover:scale-105 transition">
-            <img src="https://storage.googleapis.com/a1aa/image/37cebc4c-3a22-41fe-3045-05a9b610f081.jpg" alt="" class="rounded-md" width="110" height="160" />
-            <span class="mt-2">Frankenstein</span>
-          </li>
-          <li class="book-item flex flex-col items-center hover:scale-105 transition">
-            <img src="https://storage.googleapis.com/a1aa/image/63e91d4f-e997-46f4-00bd-5e41ed5ab871.jpg" alt="" class="rounded-md" width="110" height="160" />
-            <span class="mt-2">Great Expectations</span>
-          </li>
+      <div>
+        <h3 class="font-bold text-lg mb-4">Company</h3>
+        <ul class="space-y-2">
+          <li><a href="javascript:void(0)" onclick="openModal('aboutModal')" class="text-gray-300 hover:text-white transition-colors">About Us</a></li>
+          <li><a href="javascript:void(0)" onclick="openModal('contactModal')" class="text-gray-300 hover:text-white transition-colors">Contact Us</a></li>
         </ul>
       </div>
-    </section>
-  </main>
-
-  <!-- Footer (unchanged) -->
-      <footer class="bg-navy-900 text-white">
-        <div class="container mx-auto px-4 py-12">
-          <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-            <div>
-              <h3 class="font-bold text-lg mb-4">Product</h3>
-              <ul class="space-y-2">
-                <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Popular Books</a></li>
-                <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Latest Books</a></li>
-                <li><a href="#" class="text-gray-300 hover:text-white transition-colors">BB Shop</a></li>
-                <li><a href="#" class="text-gray-300 hover:text-white transition-colors">BB Drive</a></li>
-                <li><a href="#" class="text-gray-300 hover:text-white transition-colors">BB Partner</a></li>
-                <li><a href="#" class="text-gray-300 hover:text-white transition-colors">BB Intern</a></li>
-              </ul>
-            </div>
-            
-            <div>
-              <h3 class="font-bold text-lg mb-4">Information</h3>
-              <ul class="space-y-2">
-                <li><a href="#" class="text-gray-300 hover:text-white transition-colors">FAQ</a></li>
-                <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Blog</a></li>
-                <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Help</a></li>
-              </ul>
-            </div>
-            
-            <div>
-              <h3 class="font-bold text-lg mb-4">Company</h3>
-              <ul class="space-y-2">
-                <li><a href="#" class="text-gray-300 hover:text-white transition-colors">About Us</a></li>
-                <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Career</a></li>
-                <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Contact Us</a></li>
-              </ul>
-            </div>
-            
-            <!-- Subscribe -->
             <div class="bg-navy-800 p-6 rounded">
               <!-- Title -->
               <h3 class="font-bold text-lg mb-4">Subscribe</h3>
@@ -259,41 +226,196 @@
                 Hi, we are from DS Book. Our goal is to provide the best experience in enjoying and purchasing books.
               </p>
             </div>
-            
-          </div>
-          
-          <div class="mt-12 pt-8 border-t border-navy-700 flex flex-col md:flex-row justify-between items-center">
-            <div class="flex items-center text-orange-500 font-bold text-xl mb-4 md:mb-0">
-              <i data-lucide="book-open" class="mr-2"></i>
-              <span>DS Book</span>
-            </div>
-            
-            <div class="flex flex-wrap justify-center space-x-6 mb-4 md:mb-0">
-              <a href="#" class="text-sm text-gray-300 hover:text-white transition-colors">Terms & Conditions</a>
-              <a href="#" class="text-sm text-gray-300 hover:text-white transition-colors">Privacy Policy</a>
-              <a href="#" class="text-sm text-gray-300 hover:text-white transition-colors">Cookies</a>
-            </div>
-            
-            <div class="flex space-x-4">
-              <a href="#" class="text-gray-300 hover:text-white transition-colors">
-                <i data-lucide="facebook" class="w-5 h-5"></i>
-              </a>
-              <a href="#" class="text-gray-300 hover:text-white transition-colors">
-                <i data-lucide="mail" class="w-5 h-5"></i>
-              </a>
-              <a href="#" class="text-gray-300 hover:text-white transition-colors">
-                <i data-lucide="twitter" class="w-5 h-5"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-      </footer>
-        <script src="https://unpkg.com/lucide@latest"></script>
+    </div>
+
+    <div class="mt-12 pt-8 border-t border-navy-700 flex flex-col md:flex-row justify-between items-center">
+      <div class="flex items-center text-orange-500 font-bold text-xl mb-4 md:mb-0">
+        <i data-lucide="book-open" class="mr-2"></i>
+        <span>DS Book</span>
+      </div>
+      <div class="flex flex-wrap justify-center space-x-6 mb-4 md:mb-0">
+        <a href="javascript:void(0)" onclick="openModal('termsModal')" class="text-sm text-gray-300 hover:text-white transition-colors">Terms & Conditions</a>
+        <a href="javascript:void(0)" onclick="openModal('privacyModal')" class="text-sm text-gray-300 hover:text-white transition-colors">Privacy Policy</a>
+        <a href="javascript:void(0)" onclick="openModal('cookiesModal')" class="text-sm text-gray-300 hover:text-white transition-colors">Cookies</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Modals -->
+<!-- Contoh: Modal Terms of Use -->
+<div id="termsModal" class="modal hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+  <div class="modal-content bg-white rounded-lg p-6 max-w-lg mx-4 relative max-h-[80vh] overflow-y-auto">
+    <button onclick="closeModal('termsModal')" class="close-btn absolute top-4 right-4 text-gray-600 hover:text-gray-900 text-xl font-bold">&times;</button>
+    <h2 class="text-xl font-bold mb-4">Terms and Conditions</h2>
+    <p class="text-sm text-gray-700 mb-2">
+      Welcome to DS Book!
+    </p>
+    <p class="text-sm text-gray-700 mb-4">
+      By accessing or using our website and services, you agree to comply with and be bound by the following terms and conditions. Please read them carefully.
+    </p>
+    <ol class="list-decimal list-inside text-sm text-gray-700 space-y-2">
+      <li><strong>Use of Service</strong><br>
+        You agree to use DS Book for lawful purposes only. You must not use our platform to post or transmit any unlawful, harmful, or offensive content.
+      </li>
+      <li><strong>Account Responsibility</strong><br>
+        You are responsible for maintaining the confidentiality of your account information. You agree to notify us immediately of any unauthorized use of your account.
+      </li>
+      <li><strong>Intellectual Property</strong><br>
+        All content, logos, trademarks, and materials on DS Book are owned by or licensed to us. You may not reproduce, distribute, or use any content without our prior written permission.
+      </li>
+      <li><strong>Purchases and Payments</strong><br>
+        All purchases made on DS Book are subject to product availability and confirmation. Prices and payment terms are subject to change without prior notice.
+      </li>
+      <li><strong>Privacy and Data Protection</strong><br>
+        Your personal information is handled according to our Privacy Policy. We take reasonable measures to protect your data but cannot guarantee absolute security.
+      </li>
+      <li><strong>Limitation of Liability</strong><br>
+        DS Book is not liable for any direct, indirect, or consequential damages arising from the use of our services. We do not guarantee uninterrupted or error-free service.
+      </li>
+      <li><strong>Modifications</strong><br>
+        We reserve the right to modify these terms at any time. Continued use of DS Book after changes constitutes your acceptance of the updated terms.
+      </li>
+      <li><strong>Governing Law</strong><br>
+        These terms are governed by the laws of Indonesia. Any disputes will be resolved through the appropriate courts in Indonesia.
+      </li>
+    </ol>
+    <p class="text-sm text-gray-700 mt-4">
+      If you have any questions about these terms, please contact us at <a href="mailto:contact@dsbook.id" class="underline text-orange-600 hover:text-orange-700">contact@dsbook.id</a>.
+    </p>
+  </div>
+</div>
+
+<!-- Modal Privacy -->
+<div id="privacyModal" class="modal hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+  <div class="modal-content bg-white rounded-lg p-6 max-w-lg mx-4 relative max-h-[80vh] overflow-y-auto">
+    <button onclick="closeModal('privacyModal')" class="close-btn absolute top-4 right-4 text-gray-600 hover:text-gray-900 text-xl font-bold">&times;</button>
+    <h2 class="text-xl font-bold mb-4">Privacy Policy</h2>
+    <p class="text-sm text-gray-700 mb-2">
+      At DS Book, your privacy is important to us. This Privacy Policy explains how we collect, use, and protect your personal information when you use our services.
+    </p>
+    <ol class="list-decimal list-inside text-sm text-gray-700 space-y-2">
+      <li><strong>Information We Collect</strong><br>
+        We collect personal information such as your name, email address, and payment details when you register or make a purchase. We also collect usage data and cookies to improve your experience.
+      </li>
+      <li><strong>How We Use Your Information</strong><br>
+        Your information is used to provide and improve our services, process transactions, communicate with you, and personalize content. We do not sell your personal data to third parties.
+      </li>
+      <li><strong>Data Security</strong><br>
+        We implement reasonable security measures to protect your information from unauthorized access, alteration, disclosure, or destruction.
+      </li>
+      <li><strong>Cookies and Tracking</strong><br>
+        We use cookies to enhance site functionality, analyze traffic, and provide personalized content. You can control cookie preferences in your browser settings.
+      </li>
+      <li><strong>Third-Party Services</strong><br>
+        Some services we use may collect information on our behalf. We require these third parties to comply with privacy standards consistent with this policy.
+      </li>
+      <li><strong>Your Rights</strong><br>
+        You have the right to access, correct, or delete your personal data. You may also opt out of marketing communications by following the unsubscribe instructions provided.
+      </li>
+      <li><strong>Changes to This Policy</strong><br>
+        We may update this Privacy Policy periodically. Continued use of our services after changes means you accept the revised policy.
+      </li>
+      <li><strong>Contact Us</strong><br>
+        For any questions about this Privacy Policy or your data, please contact us at <a href="mailto:contact@dsbook.id" class="underline text-orange-600 hover:text-orange-700">contact@dsbook.id</a>.
+      </li>
+    </ol>
+  </div>
+</div>
+
+
+<!-- Help Modal -->
+<div id="helpModal" class="modal hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+  <div class="modal-content bg-white rounded-lg p-6 max-w-lg mx-4 relative max-h-[80vh] overflow-y-auto">
+    <button onclick="closeModal('helpModal')" class="close-btn absolute top-4 right-4 text-gray-600 hover:text-gray-900 text-xl font-bold">&times;</button>
+    <h2 class="text-xl font-bold mb-4">Help</h2>
+    <p class="text-sm text-gray-700 mb-2">
+      Need assistance with DS Book? We're here to help!
+    </p>
+    <p class="text-sm text-gray-700 mb-4">
+      You can contact our customer support team for any questions or issues related to your account, orders, or our services.
+    </p>
+    <p class="text-sm text-gray-700">
+      Email: <a href="mailto:support@dsbook.id" class="underline text-orange-600 hover:text-orange-700">support@dsbook.id</a><br/>
+      Phone: +62 123-4567-8901<br/>
+      Support Hours: Monday to Friday, 9 AM - 5 PM (WIB)
+    </p>
+  </div>
+</div>
+
+<!-- About Us Modal -->
+<div id="aboutModal" class="modal hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+  <div class="modal-content bg-white rounded-lg p-6 max-w-lg mx-4 relative max-h-[80vh] overflow-y-auto">
+    <button onclick="closeModal('aboutModal')" class="close-btn absolute top-4 right-4 text-gray-600 hover:text-gray-900 text-xl font-bold">&times;</button>
+    <h2 class="text-xl font-bold mb-4">About Us</h2>
+    <p class="text-sm text-gray-700 mb-2">
+      DS Book is an Indonesian platform dedicated to book lovers.
+    </p>
+    <p class="text-sm text-gray-700 mb-2">
+      Our mission is to provide an excellent experience in reading, buying, and sharing books, connecting readers with the best titles available locally and globally.
+    </p>
+    <p class="text-sm text-gray-700">
+      We believe in the power of knowledge and community, supporting education and culture through easy access to quality literature.
+    </p>
+  </div>
+</div>
+
+<!-- Contact Us Modal -->
+<div id="contactModal" class="modal hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+  <div class="modal-content bg-white rounded-lg p-6 max-w-lg mx-4 relative max-h-[80vh] overflow-y-auto">
+    <button onclick="closeModal('contactModal')" class="close-btn absolute top-4 right-4 text-gray-600 hover:text-gray-900 text-xl font-bold">&times;</button>
+    <h2 class="text-xl font-bold mb-4">Contact Us</h2>
+    <p class="text-sm text-gray-700 mb-2">
+      Have questions, suggestions, or feedback? We'd love to hear from you.
+    </p>
+    <p class="text-sm text-gray-700 mb-2">
+      You can reach our team via:
+    </p>
+    <ul class="list-disc list-inside text-sm text-gray-700 space-y-1">
+      <li>Email: <a href="mailto:contact@dsbook.id" class="underline text-orange-600 hover:text-orange-700">contact@dsbook.id</a></li>
+      <li>Phone: +62 123-4567-8901</li>
+      <li>Office Hours: Monday to Friday, 9 AM - 6 PM (WIB)</li>
+    </ul>
+  </div>
+</div>
+
+<!-- Cookies Policy Modal -->
+<div id="cookiesModal" class="modal hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+  <div class="modal-content bg-white rounded-lg p-6 max-w-lg mx-4 relative max-h-[80vh] overflow-y-auto">
+    <button onclick="closeModal('cookiesModal')" class="close-btn absolute top-4 right-4 text-gray-600 hover:text-gray-900 text-xl font-bold">&times;</button>
+    <h2 class="text-xl font-bold mb-4">Cookies Policy</h2>
+    <p class="text-sm text-gray-700 mb-2">
+      We use cookies to enhance your browsing experience on DS Book.
+    </p>
+    <ol class="list-decimal list-inside text-sm text-gray-700 space-y-2">
+      <li><strong>What Are Cookies?</strong><br/>
+      Cookies are small data files stored on your device that help us remember your preferences and improve site functionality.</li>
+      <li><strong>How We Use Cookies</strong><br/>
+      We use cookies to personalize content, analyze site traffic, and provide social media features.</li>
+      <li><strong>Managing Cookies</strong><br/>
+      You can set your browser to refuse cookies or alert you when cookies are being sent. However, some parts of our site may not function properly without cookies.</li>
+      <li><strong>Third-Party Cookies</strong><br/>
+      We may allow third-party services like analytics and advertising partners to place cookies on your device. These are governed by their respective privacy policies.</li>
+      <li><strong>Consent</strong><br/>
+      By continuing to use DS Book, you consent to our use of cookies as described in this policy.</li>
+    </ol>
+  </div>
+</div>    <script src="https://unpkg.com/lucide@latest"></script>
+
     <script>
       lucide.createIcons();
+
+        function openModal(id) {
+    document.getElementById(id).classList.remove('hidden');
+    document.getElementById(id).classList.add('flex');
+  }
+  function closeModal(id) {
+    document.getElementById(id).classList.remove('flex');
+    document.getElementById(id).classList.add('hidden');
+  }
     </script>
 
-  <!-- <script>
+    <!-- <script>
     const searchInput = document.getElementById('searchInput');
     const bookItems = document.querySelectorAll('.book-item');
 
@@ -306,12 +428,14 @@
     });
   </script> -->
 
-  <script type="module">
+    <script type="module">
       // Subscribe logic
-      document.getElementById("subscribe-button").addEventListener("click", async () => {
-        //ambil id dan nilai trim dari input email
-        const emailInput = document.getElementById("subscribe-email");
-        const email = emailInput.value.trim();
+      document
+        .getElementById("subscribe-button")
+        .addEventListener("click", async () => {
+          //ambil id dan nilai trim dari input email
+          const emailInput = document.getElementById("subscribe-email");
+          const email = emailInput.value.trim();
 
           if (!email) {
             alert("Please enter a valid email.");
@@ -319,15 +443,17 @@
           }
 
           try {
-            
-            const response = await fetch("http://localhost:3000/users/subscribe", {
-              method: "POST",
-              headers: {
-                "content-type": "application/json"
-              },
+            const response = await fetch(
+              "http://localhost:3000/users/subscribe",
+              {
+                method: "POST",
+                headers: {
+                  "content-type": "application/json",
+                },
 
-              body: JSON.stringify({email}) //use the email input as the body value
-            });
+                body: JSON.stringify({ email }), //use the email input as the body value
+              }
+            );
 
             //result
             const result = await response.json();
@@ -335,19 +461,170 @@
             if (response.ok) {
               alert("Subscription successful!");
               emailInput.value = ""; // clear input
-
             } else {
               alert("Subscription failed: " + result.error);
             }
-
-
-
           } catch (error) {
             console.error("Error subscribing:", err);
             alert("An unexpected error occurred.");
           }
-      });
-    
+        });
     </script>
-</body>
+
+    <script>
+      async function fetchBestSellers() {
+        const loadingMessage = document.getElementById("loading-message");
+        const emptyMessage = document.getElementById("empty-message");
+        const listContainer = document.getElementById("best-seller-list");
+
+        loadingMessage.classList.remove("hidden");
+        emptyMessage.classList.add("hidden");
+        listContainer.innerHTML = ""; // Clear existing content
+
+        try {
+          const response = await fetch("http://localhost:3000/products");
+          const products = await response.json();
+
+          if (!products || products.length === 0) {
+            loadingMessage.classList.add("hidden");
+            emptyMessage.classList.remove("hidden");
+            return;
+          }
+
+          products.forEach((product) => {
+            const li = document.createElement("li");
+            li.className =
+              "book-item flex flex-col items-center hover:scale-105 transition transform-gpu";
+
+            li.innerHTML = `
+          <img
+            id="book-${product.id}"
+            src="${product.image}"
+            alt="${product.name}"
+            class="rounded-md w-[110px] h-[160px] object-cover"
+          />
+          <span class="mt-2 max-w-[110px] truncate">${product.name}</span>
+        `;
+
+            listContainer.appendChild(li);
+
+            document
+              .getElementById(`book-${product.id}`)
+              .addEventListener("click", () => {
+                localStorage.setItem("selectedProductId", product.id);
+                window.location.href = "./deskripsi.html";
+              });
+          });
+
+          loadingMessage.classList.add("hidden");
+        } catch (error) {
+          console.error("Gagal mengambil data produk:", error);
+          loadingMessage.textContent = "Gagal memuat data.";
+        }
+      }
+
+      document.addEventListener("DOMContentLoaded", fetchBestSellers);
+    </script>
+
+    <script>
+      //check status login
+      const uid = localStorage.getItem("uid");
+
+      if (!uid) {
+        alert("User not authenticated. Please log in.");
+        window.location =
+          "../../../dsbook-pages/dsbook_responsive_pages/login.html";
+      }
+
+      const searchInput = document.getElementById("searchInput");
+      const sectionTemplate = document.getElementById("section-template");
+      const searchResultsContainer = document.getElementById(
+        "search-results-container"
+      );
+
+      searchInput.addEventListener("input", async () => {
+        const query = searchInput.value.trim().toLowerCase();
+
+        if (!query) {
+          searchResultsContainer.innerHTML = "";
+          return;
+        }
+
+        searchResultsContainer.innerHTML = "";
+
+        // Clone the section template
+        const section = sectionTemplate.content.cloneNode(true);
+        const heading = section.getElementById("se-title");
+        const list = section.getElementById("ul-search");
+        const loading = section.querySelector("#search-loading");
+        const empty = section.querySelector("#search-empty");
+
+        heading.textContent = `Hasil untuk "${query}"`;
+        loading.classList.remove("hidden");
+
+        searchResultsContainer.appendChild(section);
+
+        try {
+          const response = await fetch("http://localhost:3000/products");
+          const products = await response.json();
+
+          loading.classList.add("hidden");
+
+          const filtered = products.filter((product) =>
+            product.name.toLowerCase().includes(query)
+          );
+
+          if (filtered.length === 0) {
+            empty.classList.remove("hidden");
+            return;
+          }
+
+          filtered.forEach((product) => {
+            const li = document.createElement("li");
+            li.className =
+              "book-item flex flex-col items-center hover:scale-105 transition transform-gpu";
+
+            li.innerHTML = `
+          <img
+            id="search-book-${product.id}"
+            src="${product.image}"
+            alt="${product.name}"
+            class="rounded-md w-[110px] h-[160px] object-cover"
+          />
+          <span class="mt-2 max-w-[110px] truncate">${product.name}</span>
+        `;
+
+            list.appendChild(li);
+
+            document
+              .getElementById(`search-book-${product.id}`)
+              .addEventListener("click", () => {
+                localStorage.setItem("selectedProductId", product.id);
+                window.location.href = "./deskripsi.html";
+              });
+          });
+        } catch (err) {
+          console.error("Search error:", err);
+          loading.textContent = "Gagal memuat hasil.";
+        }
+      });
+    </script>
+
+    <script>
+      if (uid) {
+        fetch(`http://localhost:3000/users/${uid}`)
+          .then((res) => res.json())
+          .then((userData) => {
+            if (userData.image) {
+              const profileImg = document.getElementById("profile-picture");
+              profileImg.src =
+                userData.image || "https://i.imghippo.com/files/mxS4831hCg.png";
+            }
+          })
+          .catch((err) => {
+            console.error("Failed to load user data:", err);
+          });
+      }
+    </script>
+  </body>
 </html>
